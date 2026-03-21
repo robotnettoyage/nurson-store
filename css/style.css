@@ -348,6 +348,9 @@ body::before {
   overflow: hidden;
   padding: 152px 0 80px; /* 40px bar + 72px nav + 40px breathing room */
 }
+.hero > .container {
+  width: 100%;
+}
 
 .hero__bg {
   position: absolute;
