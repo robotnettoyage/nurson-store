@@ -8,12 +8,18 @@
   /* ---- Loader ---- */
   const loader = document.getElementById('loader');
   if (loader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        loader.classList.add('done');
-        setTimeout(() => loader.remove(), 900);
-      }, 1600);
-    });
+    const hideLoader = () => {
+      loader.classList.add('done');
+      setTimeout(() => { if (loader.parentNode) loader.remove(); }, 900);
+    };
+    // Hide on DOMContentLoaded + small delay for animation
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => setTimeout(hideLoader, 800));
+    } else {
+      setTimeout(hideLoader, 400);
+    }
+    // Hard fallback: force-remove after 3s no matter what
+    setTimeout(hideLoader, 3000);
   }
 
   /* ---- Custom Cursor ---- */

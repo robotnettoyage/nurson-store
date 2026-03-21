@@ -65,6 +65,16 @@
   width: 0%;
   animation: loaderFill 1.4s var(--ease-out) forwards;
 }
+
+/* CSS hard fallback: force-hide loader after 4s if JS never runs */
+@keyframes loaderForceHide {
+  0%   { opacity: 1; pointer-events: all; }
+  99%  { opacity: 1; pointer-events: all; }
+  100% { opacity: 0; pointer-events: none; visibility: hidden; }
+}
+.loader {
+  animation: loaderForceHide 4s linear forwards;
+}
 @keyframes loaderFill { to { width: 100%; } }
 
 @keyframes fadeInUp {
