@@ -342,11 +342,10 @@ body::before {
 .hero {
   min-height: 100svh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
   position: relative;
   overflow: hidden;
-  padding-bottom: 80px;
+  padding: 120px 0 80px;
 }
 
 .hero__bg {
@@ -454,8 +453,7 @@ body::before {
 .hero__content {
   position: relative;
   z-index: 3;
-  max-width: 640px;
-  padding-top: 100px;
+  max-width: 560px;
 }
 .hero__eyebrow {
   display: flex;
