@@ -178,17 +178,18 @@ body::before {
 /* ---- Navigation ---- */
 .nav {
   position: fixed;
-  top: 0;
+  top: 40px; /* below announcement bar */
   left: 0;
   right: 0;
   z-index: 500;
   padding: 0;
-  transition: background 0.5s var(--ease-out), padding 0.4s;
+  transition: background 0.5s var(--ease-out), top 0.3s var(--ease-out);
 }
 .nav.scrolled {
   background: rgba(8, 12, 10, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-dim);
+  top: 0;
 }
 .nav__inner {
   display: flex;
@@ -345,7 +346,7 @@ body::before {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 120px 0 80px;
+  padding: 152px 0 80px; /* 40px bar + 72px nav + 40px breathing room */
 }
 
 .hero__bg {
