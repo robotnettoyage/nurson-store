@@ -11,5 +11,3 @@
 /cgv              /cgv.html         301
 /mentions-legales /mentions-legales.html 301
 
-# 404 fallback
-/*               /index.html        200
