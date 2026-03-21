@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (si vous utilisez des outils de build)
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Build output (si vous minifiez)
+*.min.css
+*.min.js
+
+# Environment
+.env
+.env.local
+
+# Secrets
+stripe-keys.txt

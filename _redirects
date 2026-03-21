@@ -1,0 +1,15 @@
+# Cloudflare Pages Redirects
+# Format: /old-path /new-path [status-code]
+
+# Redirect www to non-www (configure via Cloudflare dashboard instead)
+# https://www.nurson.fr/* https://nurson.fr/:splat 301
+
+# Clean URLs (optional) — if you add a _routes.json later
+/produit          /produit.html     301
+/a-propos         /a-propos.html    301
+/contact          /contact.html     301
+/cgv              /cgv.html         301
+/mentions-legales /mentions-legales.html 301
+
+# 404 fallback
+/*               /index.html        200
