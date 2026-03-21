@@ -363,7 +363,7 @@ body::before {
   position: absolute;
   right: 5%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% + 36px));
   width: min(540px, 45vw);
   aspect-ratio: 1;
   opacity: 0.12;
@@ -382,7 +382,7 @@ body::before {
   position: absolute;
   right: 8%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% + 36px)); /* offset for asymmetric padding (152px top, 80px bottom) */
   width: min(420px, 38vw);
   z-index: 2;
 }
