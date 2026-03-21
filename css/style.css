@@ -28,6 +28,12 @@ ul, ol { list-style: none; }
   --surface: #1A241B;
   --surface-2: #212E22;
   --gold: #C8A96E;
+
+  /* ---- Aliases for compatibility ---- */
+  --muted: rgba(240, 237, 230, 0.6);
+  --font-sans: 'DM Sans', sans-serif;
+  --color-cream: #1A241B;
+  --color-muted: rgba(240, 237, 230, 0.6);
   --gold-bright: #DFC07D;
   --gold-dim: #8A6E3A;
   --gold-glow: rgba(200, 169, 110, 0.15);
@@ -1271,3 +1277,42 @@ details summary::-webkit-details-marker { display: none; }
   .reviews-summary { flex-direction: column; gap: 20px; }
   .product-cta-wrap .btn { font-size: 0.78rem; padding: 14px 20px; }
 }
+
+/* ============================================
+   Compatibility fixes & missing classes
+   ============================================ */
+
+/* Active nav link — support both .active (JS) and --active (hardcoded) */
+.nav__link.active,
+.nav__link--active {
+  color: var(--white) !important;
+}
+.nav__link.active::after,
+.nav__link--active::after {
+  width: 100% !important;
+}
+
+/* page-hero inner wrapper */
+.page-hero__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* value-item__content — wrapper used in a-propos.html */
+.value-item__content { flex: 1; }
+.value-item__title { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.value-item__text { font-size: 0.85rem; color: var(--white-60); line-height: 1.6; }
+
+/* team-card aliases used in a-propos.html */
+.team-card__info { text-align: center; }
+.team-card__bio {
+  font-size: 0.85rem;
+  color: var(--white-60);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* radius-md alias (used in cgv.html inline styles) */
+:root { --radius-md: 12px; }

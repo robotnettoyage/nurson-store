@@ -3,68 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conditions Générales de Vente (CGV) — NurSon</title>
+  <title>Conditions Générales de Vente — NurSon</title>
   <meta name="description" content="Conditions générales de vente de NurSon. Commandes, livraison, retours, garanties et paiement." />
   <link rel="canonical" href="https://nurson.fr/cgv.html" />
   <meta name="robots" content="noindex, follow" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 </head>
 <body>
 
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="scroll-progress"></div>
+
   <div class="announcement-bar">
-    <span>🌙 NurSon — Enceinte Coranique Premium</span>
+    <span>🌙 NURSON — ENCEINTE CORANIQUE PREMIUM</span>
   </div>
 
-  <header class="header">
+  <nav class="nav" role="navigation" aria-label="Navigation principale">
     <div class="container">
-      <div class="header__inner">
-        <a href="index.html" class="logo">
-          <div class="logo__icon">☽</div>
-          Nur<span>Son</span>
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="NurSon Accueil">
+          <div class="nav__logo-mark" aria-hidden="true">☽</div>
+          Nur<em>Son</em>
         </a>
-        <nav class="nav" aria-label="Navigation principale">
+        <div class="nav__links">
           <a href="index.html" class="nav__link">Accueil</a>
-          <a href="produit.html" class="nav__link">Notre Produit</a>
+          <a href="produit.html" class="nav__link">Produit</a>
           <a href="a-propos.html" class="nav__link">À Propos</a>
           <a href="contact.html" class="nav__link">Contact</a>
-        </nav>
-        <div class="header__actions">
-          <a href="produit.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.875rem;">Commander</a>
-          <button class="btn-cart" aria-label="Panier">🛒<span class="cart-badge" style="display:none;">0</span></button>
-          <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+        <div class="nav__cta">
+          <a href="produit.html" class="btn btn-gold" style="padding:12px 24px; font-size:0.75rem;">Commander →</a>
+          <button class="nav__menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <nav class="mobile-nav">
-    <button class="mobile-nav__close">✕</button>
+  <nav class="mobile-nav" aria-label="Menu mobile">
+    <button class="mobile-nav__close" aria-label="Fermer">✕</button>
     <a href="index.html" class="mobile-nav__link">Accueil</a>
-    <a href="produit.html" class="mobile-nav__link">Notre Produit</a>
+    <a href="produit.html" class="mobile-nav__link">Produit</a>
     <a href="a-propos.html" class="mobile-nav__link">À Propos</a>
     <a href="contact.html" class="mobile-nav__link">Contact</a>
+    <a href="produit.html" class="btn btn-gold btn-full mt-32">Commander maintenant</a>
   </nav>
 
   <main>
+    <section class="page-hero" aria-labelledby="cgv-title">
+      <div class="container">
+        <div class="page-hero__inner">
+          <span class="t-label">Légal</span>
+          <h1 id="cgv-title" class="t-display" style="color:white;">Conditions<br/><em style="color:var(--gold);">Générales de Vente</em></h1>
+          <p class="page-hero__sub">Dernière mise à jour : 1er janvier 2024</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <div class="legal-content">
           <nav class="breadcrumb" aria-label="Fil d'Ariane">
             <a href="index.html">Accueil</a>
             <span class="breadcrumb__sep">/</span>
-            <span>CGV</span>
+            <span aria-current="page">CGV</span>
           </nav>
-
-          <h1 style="margin-top: 24px; margin-bottom: 8px;">Conditions Générales de Vente</h1>
-          <p class="text-muted text-small">Dernière mise à jour : 1er janvier 2024 — Applicables aux achats effectués à compter de cette date.</p>
-
-          <div class="ornament mt-24"><span class="ornament__symbol" aria-hidden="true">✦ ✦ ✦</span></div>
 
           <h2>Article 1 — Champ d'application</h2>
           <p>Les présentes Conditions Générales de Vente (CGV) s'appliquent à toutes les ventes conclues entre NurSon (ci-après « le Vendeur ») et tout consommateur ou non-professionnel (ci-après « le Client ») via le site nurson.fr.</p>
@@ -79,98 +89,71 @@
           </ul>
 
           <h2>Article 3 — Produits</h2>
-          <p>Les produits proposés à la vente sont ceux présentés sur le site nurson.fr au moment de la consultation par le Client. Les photographies et descriptions des produits sont données à titre indicatif. NurSon s'efforce d'assurer la conformité des représentations des produits avec leur apparence réelle.</p>
-          <p>NurSon se réserve le droit de modifier à tout moment son catalogue de produits, les prix et les conditions de vente.</p>
+          <p>Les produits proposés à la vente sont ceux présentés sur le site nurson.fr au moment de la consultation par le Client. NurSon se réserve le droit de modifier à tout moment son catalogue de produits, les prix et les conditions de vente.</p>
 
           <h2>Article 4 — Prix</h2>
-          <p>Les prix sont indiqués en euros TTC (toutes taxes comprises). Les frais de livraison sont indiqués séparément et s'ajoutent au prix des produits.</p>
-          <p>NurSon se réserve le droit de modifier ses prix à tout moment. Les produits seront facturés au tarif en vigueur au moment de la validation de la commande.</p>
+          <p>Les prix sont indiqués en euros TTC (toutes taxes comprises). Les frais de livraison sont indiqués séparément et s'ajoutent au prix des produits. NurSon se réserve le droit de modifier ses prix à tout moment. Les produits seront facturés au tarif en vigueur au moment de la validation de la commande.</p>
 
           <h2>Article 5 — Commande</h2>
           <h3>5.1 Processus de commande</h3>
           <ol>
             <li>Sélection du produit et des options souhaitées</li>
-            <li>Ajout au panier</li>
             <li>Validation du panier et saisie des informations de livraison</li>
             <li>Choix du mode de paiement</li>
             <li>Validation de la commande et paiement sécurisé</li>
             <li>Confirmation de commande par email</li>
           </ol>
-
-          <h3>5.2 Confirmation de commande</h3>
-          <p>Un email de confirmation de commande est envoyé au Client dès réception du paiement. Cet email récapitule les éléments de la commande. La commande est définitive à réception de cet email de confirmation.</p>
-
-          <h3>5.3 Disponibilité</h3>
-          <p>Les offres sont valables dans la limite des stocks disponibles. En cas d'indisponibilité d'un produit après passation de la commande, NurSon informera le Client par email dans les meilleurs délais et procédera au remboursement intégral.</p>
+          <h3>5.2 Disponibilité</h3>
+          <p>Les offres sont valables dans la limite des stocks disponibles. En cas d'indisponibilité d'un produit après passation de la commande, NurSon informera le Client par email et procédera au remboursement intégral.</p>
 
           <h2>Article 6 — Paiement</h2>
           <h3>6.1 Modes de paiement acceptés</h3>
           <ul>
             <li>Carte bancaire (Visa, Mastercard, American Express)</li>
-            <li>PayPal</li>
-            <li>Apple Pay / Google Pay</li>
+            <li>PayPal · Apple Pay / Google Pay</li>
           </ul>
           <p>Les paiements sont sécurisés par Stripe (certifié PCI DSS). Aucune donnée bancaire n'est stockée par NurSon.</p>
 
-          <h3>6.2 Sécurité des paiements</h3>
-          <p>NurSon utilise le protocole SSL pour sécuriser toutes les transactions. En cas de refus de paiement par les organismes de crédit, la commande sera automatiquement annulée.</p>
-
           <h2>Article 7 — Livraison</h2>
           <h3>7.1 Zones de livraison</h3>
-          <p>NurSon livre en France métropolitaine, Belgique, Suisse et Luxembourg. Des livraisons internationales peuvent être disponibles sur demande.</p>
-
-          <h3>7.2 Délais de livraison</h3>
+          <p>NurSon livre en France métropolitaine, Belgique, Suisse et Luxembourg.</p>
+          <h3>7.2 Délais et frais</h3>
           <ul>
-            <li><strong>Traitement :</strong> 24 à 48h ouvrées après confirmation du paiement</li>
-            <li><strong>Livraison standard :</strong> 2 à 4 jours ouvrés en France métropolitaine</li>
-            <li><strong>Livraison express :</strong> 24h en France (option payante)</li>
+            <li><strong>Traitement :</strong> 24 à 48h ouvrées</li>
+            <li><strong>France standard :</strong> 2–4 jours · 5,90€ (offerte dès 60€)</li>
+            <li><strong>France express :</strong> 24h · 9,90€</li>
+            <li><strong>Belgique / Suisse / Luxembourg :</strong> 8,90€</li>
           </ul>
-          <p>Ces délais sont indicatifs et ne constituent pas une obligation de résultat. NurSon ne peut être tenu responsable des retards dus aux transporteurs ou à des circonstances exceptionnelles.</p>
-
-          <h3>7.3 Frais de livraison</h3>
-          <ul>
-            <li>Livraison standard France : 5,90€ (offerte dès 60€ d'achat)</li>
-            <li>Livraison express France : 9,90€</li>
-            <li>Belgique, Suisse, Luxembourg : 8,90€</li>
-          </ul>
-
-          <h3>7.4 Réception du colis</h3>
-          <p>À la réception, le Client doit vérifier l'état du colis et des produits en présence du livreur. Tout dommage apparent doit être signalé immédiatement au livreur et à NurSon sous 48h.</p>
 
           <h2>Article 8 — Droit de rétractation</h2>
-          <h3>8.1 Délai de rétractation</h3>
-          <p>Conformément à l'article L221-18 du Code de la consommation, le Client dispose d'un délai de <strong>14 jours</strong> à compter de la réception du produit pour exercer son droit de rétractation, sans avoir à justifier sa décision. NurSon offre volontairement un délai étendu de <strong>30 jours</strong>.</p>
-
-          <h3>8.2 Modalités de rétractation</h3>
-          <p>Pour exercer ce droit, le Client doit notifier NurSon par email à <a href="mailto:retour@nurson.fr">retour@nurson.fr</a> en indiquant son numéro de commande. Le produit doit être retourné dans son emballage d'origine, non utilisé et en parfait état.</p>
-
+          <h3>8.1 Délai</h3>
+          <p>Conformément à l'article L221-18 du Code de la consommation, le Client dispose d'un délai de <strong>14 jours</strong> à compter de la réception du produit. NurSon offre volontairement un délai étendu de <strong>30 jours</strong>.</p>
+          <h3>8.2 Modalités</h3>
+          <p>Notifier NurSon par email à <a href="mailto:retour@nurson.fr">retour@nurson.fr</a> avec le numéro de commande. Le produit doit être retourné non utilisé et en parfait état dans son emballage d'origine.</p>
           <h3>8.3 Remboursement</h3>
-          <p>Le remboursement sera effectué dans les 14 jours suivant la réception du produit retourné, par le même moyen de paiement utilisé lors de l'achat. Les frais de retour sont à la charge du Client, sauf si le produit est défectueux ou non conforme.</p>
+          <p>Remboursement dans les 14 jours suivant la réception du retour, par le même moyen de paiement. Frais de retour à la charge du Client sauf si le produit est défectueux.</p>
 
           <h2>Article 9 — Garanties</h2>
           <h3>9.1 Garantie légale de conformité</h3>
-          <p>NurSon est tenu des défauts de conformité du bien au contrat dans les conditions prévues aux articles L217-4 à L217-16 du Code de la consommation. En cas de défaut de conformité, le Client peut choisir entre la réparation ou le remplacement du bien.</p>
-
+          <p>NurSon est tenu des défauts de conformité conformément aux articles L217-4 à L217-16 du Code de la consommation.</p>
           <h3>9.2 Garantie commerciale</h3>
-          <p>En complément de la garantie légale, NurSon offre une garantie commerciale de <strong>12 mois</strong> contre les défauts de fabrication. Cette garantie couvre les défauts matériels et de fabrication, à l'exclusion des dommages causés par une mauvaise utilisation.</p>
+          <p>NurSon offre une garantie commerciale de <strong>12 mois</strong> contre les défauts de fabrication, à l'exclusion des dommages causés par une mauvaise utilisation.</p>
 
           <h2>Article 10 — Responsabilité</h2>
-          <p>NurSon ne peut être tenu responsable des dommages indirects résultant de l'utilisation de ses produits. La responsabilité de NurSon est limitée au montant de la commande.</p>
+          <p>La responsabilité de NurSon est limitée au montant de la commande concernée. NurSon ne peut être tenu responsable des dommages indirects résultant de l'utilisation de ses produits.</p>
 
           <h2>Article 11 — Données personnelles</h2>
           <p>Le traitement des données personnelles est régi par notre <a href="mentions-legales.html#confidentialite">Politique de confidentialité</a>.</p>
 
           <h2>Article 12 — Litiges et médiation</h2>
-          <p>En cas de litige, le Client est invité à contacter NurSon en premier lieu pour trouver une solution amiable. À défaut d'accord, le Client peut recourir à la médiation de la consommation conformément à la Directive 2013/11/UE.</p>
-          <p>Médiateur compétent : [Nom du médiateur et lien vers sa plateforme]</p>
-          <p>Plateforme européenne de règlement des litiges en ligne : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">ec.europa.eu/consumers/odr</a></p>
+          <p>En cas de litige, le Client est invité à contacter NurSon en premier lieu pour trouver une solution amiable. Plateforme européenne de règlement des litiges : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">ec.europa.eu/consumers/odr</a>.</p>
 
           <h2>Article 13 — Droit applicable</h2>
-          <p>Les présentes CGV sont soumises au droit français. Tout litige qui ne peut être résolu à l'amiable sera soumis à la compétence des tribunaux français.</p>
+          <p>Les présentes CGV sont soumises au droit français. Tout litige sera soumis à la compétence des tribunaux français.</p>
 
-          <div style="margin-top: 40px; padding: 20px; background: var(--color-cream); border-radius: var(--radius-md); border-left: 4px solid var(--color-gold);">
-            <p style="font-size: 0.875rem; color: var(--color-muted); margin: 0;">
-              <strong>Note :</strong> Ces CGV constituent un modèle à compléter et à faire valider par un professionnel du droit (avocat ou juriste) avant publication sur votre site. Les informations entre crochets doivent être remplacées par vos données réelles.
+          <div style="margin-top:48px; padding:24px 28px; background:rgba(200,169,110,0.05); border-radius:8px; border-left:4px solid var(--gold);">
+            <p style="font-size:0.875rem; color:var(--white-60); margin:0; line-height:1.7;">
+              <strong style="color:var(--gold);">Note :</strong> Ces CGV constituent un modèle à compléter avec vos informations réelles (SIRET, adresse, etc.) et à faire valider par un professionnel du droit avant toute mise en ligne officielle.
             </p>
           </div>
         </div>
@@ -178,44 +161,33 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="index.html" class="logo">
-            <div class="logo__icon">☽</div>
-            Nur<span>Son</span>
+        <div>
+          <a href="index.html" class="nav__logo footer__logo" style="margin-bottom:16px; display:inline-flex;">
+            <div class="nav__logo-mark">☽</div>Nur<em>Son</em>
           </a>
-          <p class="footer__brand-desc">NurSon est une marque française engagée à proposer des produits islamiques premium.</p>
+          <p class="footer__desc">Marque française de produits islamiques premium.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">📱</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+          </div>
         </div>
-        <div>
-          <h3 class="footer__col-title">Boutique</h3>
-          <ul class="footer__links">
-            <li><a href="produit.html" class="footer__link">NurSon Classic</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer__col-title">Informations</h3>
-          <ul class="footer__links">
-            <li><a href="a-propos.html" class="footer__link">À Propos</a></li>
-            <li><a href="contact.html" class="footer__link">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer__col-title">Légal</h3>
-          <ul class="footer__links">
-            <li><a href="cgv.html" class="footer__link">CGV</a></li>
-            <li><a href="mentions-legales.html" class="footer__link">Mentions légales</a></li>
-          </ul>
-        </div>
+        <div><div class="footer__col-title">Boutique</div><ul class="footer__links"><li><a href="produit.html" class="footer__link">NurSon Classic</a></li></ul></div>
+        <div><div class="footer__col-title">Marque</div><ul class="footer__links"><li><a href="a-propos.html" class="footer__link">À Propos</a></li><li><a href="contact.html" class="footer__link">Contact</a></li></ul></div>
+        <div><div class="footer__col-title">Légal</div><ul class="footer__links"><li><a href="cgv.html" class="footer__link">CGV</a></li><li><a href="mentions-legales.html" class="footer__link">Mentions légales</a></li></ul></div>
       </div>
-      <hr class="divider" />
+      <hr class="divider"/>
       <div class="footer__bottom">
-        <p>© 2024 NurSon. Tous droits réservés.</p>
+        <span>© 2024 NurSon · Fait avec 🤍 en France</span>
+        <div class="footer__bottom-links"><a href="cgv.html">CGV</a><a href="mentions-legales.html">Mentions légales</a></div>
       </div>
     </div>
   </footer>
 
+  <div class="toast" role="alert" aria-live="polite"></div>
   <script src="js/main.js"></script>
 </body>
 </html>

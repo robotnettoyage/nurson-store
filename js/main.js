@@ -82,6 +82,8 @@
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav__link, .mobile-nav__link').forEach(link => {
     const href = link.getAttribute('href') || '';
+    // Remove any hardcoded --active modifier, let JS handle it
+    link.classList.remove('nav__link--active');
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('active');
     }
