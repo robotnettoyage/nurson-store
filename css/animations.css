@@ -23,7 +23,7 @@
 .loader {
   position: fixed;
   inset: 0;
-  background: #080C0A;
+  background: #FEFCF7;
   z-index: 99999;
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
   font-weight: 300;
-  color: #F0EDE6;
+  color: #1A2414;
   letter-spacing: 0.1em;
 }
 .loader__logo em { color: #C8A96E; font-style: normal; }
@@ -54,7 +54,7 @@
 .loader__bar {
   width: 160px;
   height: 1px;
-  background: rgba(240,237,230,0.1);
+  background: rgba(26,36,20,0.1);
   border-radius: 1px;
   overflow: hidden;
 }
