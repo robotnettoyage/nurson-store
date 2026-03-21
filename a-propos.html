@@ -3,277 +3,358 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>À Propos — NurSon | Notre Mission & Nos Valeurs</title>
-  <meta name="description" content="Découvrez l'histoire de NurSon, marque française de produits islamiques premium. Notre mission : nourrir la foi des familles musulmanes avec des produits de qualité." />
+  <title>Notre Histoire — NurSon | Mission & Valeurs</title>
+  <meta name="description" content="Découvrez l'histoire de NurSon, marque française de produits islamiques premium. Notre mission : nourrir la foi des familles musulmanes avec excellence et authenticité." />
   <link rel="canonical" href="https://nurson.fr/a-propos.html" />
-  <meta property="og:title" content="À Propos — NurSon" />
-  <meta property="og:description" content="Notre mission : nourrir la foi des familles musulmanes avec des produits de qualité premium." />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nurson.fr/a-propos.html" />
+  <meta property="og:title" content="Notre Histoire — NurSon" />
+  <meta property="og:description" content="Découvrez l'histoire et la mission de NurSon, marque islamique premium conçue par des musulmans, pour des musulmans." />
+  <meta property="og:image" content="https://nurson.fr/images/og-image.jpg" />
+  <meta property="og:locale" content="fr_FR" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"NurSon","url":"https://nurson.fr","description":"Boutique en ligne de produits islamiques premium.","contactPoint":{"@type":"ContactPoint","email":"contact@nurson.fr","contactType":"customer service","availableLanguage":"French"}}
+  </script>
 </head>
 <body>
 
-  <div class="announcement-bar">
-    <span>🌙 Livraison offerte dès 60€ d'achat · Expédition sous 24–48h ouvrées</span>
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="loader__arabic">نُورٌ</div>
+    <div class="loader__logo">Nur<em>Son</em></div>
+    <div class="loader__bar"><div class="loader__bar-fill"></div></div>
   </div>
 
-  <header class="header">
+  <!-- Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Scroll progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span style="transition: opacity 0.4s, transform 0.4s;">🌙 LIVRAISON OFFERTE DÈS 60€ · EXPÉDITION 24–48H</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Navigation principale">
     <div class="container">
-      <div class="header__inner">
-        <a href="index.html" class="logo">
-          <div class="logo__icon">☽</div>
-          Nur<span>Son</span>
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="NurSon Accueil">
+          <div class="nav__logo-mark" aria-hidden="true">☽</div>
+          Nur<em>Son</em>
         </a>
-        <nav class="nav" aria-label="Navigation principale">
+
+        <div class="nav__links">
           <a href="index.html" class="nav__link">Accueil</a>
-          <a href="produit.html" class="nav__link">Notre Produit</a>
-          <a href="a-propos.html" class="nav__link">À Propos</a>
+          <a href="produit.html" class="nav__link">Produit</a>
+          <a href="a-propos.html" class="nav__link nav__link--active">À Propos</a>
           <a href="contact.html" class="nav__link">Contact</a>
-        </nav>
-        <div class="header__actions">
-          <a href="produit.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.875rem;">Commander</a>
-          <button class="btn-cart" aria-label="Panier">🛒<span class="cart-badge" style="display:none;">0</span></button>
-          <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+
+        <div class="nav__cta">
+          <a href="produit.html" class="btn btn-gold" style="padding: 12px 24px; font-size: 0.75rem;">Commander →</a>
+          <button class="nav__menu-btn" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <nav class="mobile-nav">
-    <button class="mobile-nav__close">✕</button>
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" aria-label="Menu mobile">
+    <button class="mobile-nav__close" aria-label="Fermer">✕</button>
     <a href="index.html" class="mobile-nav__link">Accueil</a>
-    <a href="produit.html" class="mobile-nav__link">Notre Produit</a>
+    <a href="produit.html" class="mobile-nav__link">Produit</a>
     <a href="a-propos.html" class="mobile-nav__link">À Propos</a>
     <a href="contact.html" class="mobile-nav__link">Contact</a>
-    <a href="produit.html" class="btn btn-primary btn-full mt-24">Commander maintenant</a>
+    <a href="produit.html" class="btn btn-gold btn-full mt-32">Commander maintenant</a>
   </nav>
 
   <main>
-    <!-- Page Hero -->
-    <section class="hero" style="padding: 60px 0;" aria-labelledby="about-hero-title">
+
+    <!-- ======================== PAGE HERO ======================== -->
+    <section class="page-hero" aria-labelledby="page-hero-title">
       <div class="container">
-        <div style="max-width: 680px; margin: 0 auto; text-align: center; position: relative; z-index: 1;">
-          <span class="section-label" style="color: var(--color-gold-light);">Notre histoire</span>
-          <h1 id="about-hero-title" style="color: white; margin-bottom: 20px; font-size: clamp(2rem, 4vw, 3rem);">
-            Nés d'une foi,<br/>
-            <em style="color: var(--color-gold);">portés par une mission</em>
+        <div class="page-hero__inner">
+          <span class="t-label reveal-fade">Notre identité</span>
+          <h1 id="page-hero-title" class="t-display reveal-fade" style="color: white; transition-delay: 0.12s;">
+            Notre<br/>
+            <em style="color: var(--gold);">histoire</em>
           </h1>
-          <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.75; max-width: 540px; margin: 0 auto;">
-            NurSon est née d'une conviction simple : les familles musulmanes méritent des produits aussi beaux et qualitatifs que leur foi est profonde.
+          <p class="page-hero__sub reveal-fade" style="transition-delay: 0.28s;">
+            Une aventure née de la foi, portée par l'excellence.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Mission -->
-    <section class="section" aria-labelledby="mission-title">
+    <!-- ======================== MISSION ======================== -->
+    <section class="section" id="mission" aria-labelledby="mission-title">
       <div class="container">
-        <div class="grid-2">
-          <div class="fade-in">
-            <span class="section-label">Notre mission</span>
-            <h2 class="section-title" id="mission-title">Nourrir la foi<br/>au quotidien</h2>
-            <p style="color: var(--color-muted); line-height: 1.8; margin-bottom: 20px;">
-              Nous avons fondé NurSon avec une question simple : pourquoi serait-il si difficile de trouver des produits islamiques à la fois premium, bien pensés et esthétiquement cohérents ?
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
+
+          <!-- Left: brand story -->
+          <div>
+            <span class="t-label reveal-fade">Notre mission</span>
+            <h2 class="t-headline reveal-fade" id="mission-title" style="color: var(--white); margin-top: 16px; margin-bottom: 32px; transition-delay: 0.1s;">
+              Nourrir la foi<br/>au quotidien
+            </h2>
+            <p class="t-body reveal-fade" style="transition-delay: 0.2s;">
+              NurSon est née d'un constat simple : la foi se vit au quotidien, dans chaque moment de la journée — au réveil, pendant le travail, avant de dormir. Nous avons voulu créer un objet qui accompagne ces instants avec la dignité et la qualité qu'ils méritent.
             </p>
-            <p style="color: var(--color-muted); line-height: 1.8; margin-bottom: 20px;">
-              Trop souvent, les produits religieux islamiques sont soit bas de gamme, soit sans soin dans leur conception. Nous avons voulu changer cela.
+            <p class="t-body reveal-fade" style="margin-top: 20px; transition-delay: 0.3s;">
+              Fondée par une équipe de jeunes musulmans français passionnés d'audio et de design, NurSon a été pensée de A à Z pour être l'enceinte coranique la plus soignée du marché. Chaque récitateur a été sélectionné avec soin, chaque fichier audio masterisé en haute fidélité, chaque finition choisie pour honorer la parole divine.
             </p>
-            <p style="color: var(--color-muted); line-height: 1.8;">
-              NurSon, c'est la conviction que notre foi mérite le meilleur — des objets qui honorent la beauté de l'islam et s'intègrent avec élégance dans nos foyers modernes.
+            <p class="t-body reveal-fade" style="margin-top: 20px; transition-delay: 0.4s;">
+              Aujourd'hui, plus de 127 familles en France et dans le monde font confiance à NurSon pour illuminer leur foyer. 5 % de chaque vente est reversé à des associations caritatives islamiques. Parce qu'une marque qui se réclame de l'Islam se doit d'avoir un impact concret dans sa communauté.
             </p>
-            <div class="arabic mt-24" aria-label="Inna lillahi wa inna ilayhi raji'oun">إِنَّ اللَّهَ جَمِيلٌ يُحِبُّ الْجَمَالَ</div>
-            <p style="text-align:center; font-size:0.85rem; color: var(--color-muted);">"Allah est beau et Il aime la beauté" — Sahih Muslim</p>
           </div>
 
-          <div class="fade-in delay-2">
-            <div style="background: var(--color-cream); border-radius: var(--radius-lg); padding: 40px; border: 1px solid var(--color-border);">
-              <div style="font-size: 4rem; text-align:center; margin-bottom: 20px;" aria-hidden="true">🌿</div>
-              <h3 style="text-align:center; margin-bottom: 20px; font-size: 1.3rem;">Nos valeurs fondatrices</h3>
-              <ul style="display: flex; flex-direction: column; gap: 16px;">
-                <li style="display:flex; gap:12px; align-items:flex-start;">
-                  <span style="color: var(--color-gold); font-size: 1.2rem; flex-shrink:0;" aria-hidden="true">✦</span>
-                  <div>
-                    <strong style="display:block; font-size:0.95rem;">Excellence (Ihsan)</strong>
-                    <span style="font-size:0.875rem; color:var(--color-muted);">Tout ce que nous faisons, nous le faisons avec le plus grand soin et la plus haute qualité.</span>
-                  </div>
-                </li>
-                <li style="display:flex; gap:12px; align-items:flex-start;">
-                  <span style="color: var(--color-gold); font-size: 1.2rem; flex-shrink:0;" aria-hidden="true">✦</span>
-                  <div>
-                    <strong style="display:block; font-size:0.95rem;">Authenticité</strong>
-                    <span style="font-size:0.875rem; color:var(--color-muted);">Des contenus vérifiés par des spécialistes islamiques pour une fiabilité totale.</span>
-                  </div>
-                </li>
-                <li style="display:flex; gap:12px; align-items:flex-start;">
-                  <span style="color: var(--color-gold); font-size: 1.2rem; flex-shrink:0;" aria-hidden="true">✦</span>
-                  <div>
-                    <strong style="display:block; font-size:0.95rem;">Communauté</strong>
-                    <span style="font-size:0.875rem; color:var(--color-muted);">Conçu par des musulmans, pour des musulmans — nous comprenons vos besoins de l'intérieur.</span>
-                  </div>
-                </li>
-                <li style="display:flex; gap:12px; align-items:flex-start;">
-                  <span style="color: var(--color-gold); font-size: 1.2rem; flex-shrink:0;" aria-hidden="true">✦</span>
-                  <div>
-                    <strong style="display:block; font-size:0.95rem;">Impact durable</strong>
-                    <span style="font-size:0.875rem; color:var(--color-muted);">Une partie de nos bénéfices soutient des projets éducatifs islamiques en France et à l'étranger.</span>
-                  </div>
-                </li>
-              </ul>
+          <!-- Right: values -->
+          <div>
+            <div class="values-list">
+
+              <div class="value-item reveal-fade">
+                <div class="value-item__icon" aria-hidden="true">✨</div>
+                <div class="value-item__content">
+                  <div class="value-item__title">Excellence — Ihsân</div>
+                  <div class="value-item__text">L'ihsân nous commande de faire chaque chose comme si Allah nous observait. Nous appliquons ce principe à chaque détail de NurSon — son, design, service client.</div>
+                </div>
+              </div>
+
+              <div class="value-item reveal-fade delay-1">
+                <div class="value-item__icon" aria-hidden="true">🤝</div>
+                <div class="value-item__content">
+                  <div class="value-item__title">Authenticité</div>
+                  <div class="value-item__text">Nos récitations sont vérifiées par des spécialistes islamiques. Nos récitateurs sont parmi les plus reconnus dans le monde arabe. Pas de compromis sur la qualité du contenu.</div>
+                </div>
+              </div>
+
+              <div class="value-item reveal-fade delay-2">
+                <div class="value-item__icon" aria-hidden="true">🕌</div>
+                <div class="value-item__content">
+                  <div class="value-item__title">Communauté</div>
+                  <div class="value-item__text">NurSon est une marque communautaire. Nous écoutons, nous améliorons, nous grandissons ensemble. Chaque retour client nourrit nos futures versions.</div>
+                </div>
+              </div>
+
+              <div class="value-item reveal-fade delay-3">
+                <div class="value-item__icon" aria-hidden="true">🌱</div>
+                <div class="value-item__content">
+                  <div class="value-item__title">Impact durable</div>
+                  <div class="value-item__text">5 % de nos bénéfices sont reversés à des associations d'aide aux orphelins et aux familles dans le besoin. Acheter NurSon, c'est aussi contribuer à la sadaqa jariya.</div>
+                </div>
+              </div>
+
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Stats -->
-    <section class="section section--dark" aria-labelledby="stats-title">
+    <!-- ======================== ARABIC VERSE ======================== -->
+    <section class="arabic-section" aria-label="Verset coranique">
+      <div class="arabic-section__divider" aria-hidden="true">
+        <div class="arabic-section__divider-line"></div>
+        <span class="arabic-section__divider-icon">✦</span>
+        <div class="arabic-section__divider-line"></div>
+      </div>
+      <p class="t-arabic reveal-fade" aria-label="Inna ma'al 'usri yusra">
+        إِنَّ مَعَ الْعُسْرِ يُسْرًا
+      </p>
+      <p class="arabic-section__ref reveal-fade delay-2">
+        "En vérité, avec la difficulté vient la facilité." — Sourate Al-Inshirah, 94:6
+      </p>
+    </section>
+
+    <!-- ======================== STATS ======================== -->
+    <section class="stats" aria-label="NurSon en chiffres">
       <div class="container">
-        <h2 id="stats-title" class="sr-only">Chiffres clés NurSon</h2>
-        <div class="grid-4">
-          <div class="stat-block fade-in">
-            <div class="stat-block__number">120+</div>
-            <div class="stat-block__label">Familles satisfaites</div>
+        <div class="stats__grid">
+          <div class="stat-item reveal-fade">
+            <div class="stat-item__num">
+              <span class="counter" data-target="127" data-suffix="">0</span>+
+            </div>
+            <div class="stat-item__label">Familles satisfaites</div>
           </div>
-          <div class="stat-block fade-in delay-1">
-            <div class="stat-block__number">4.9★</div>
-            <div class="stat-block__label">Note moyenne</div>
+          <div class="stat-item reveal-fade delay-1">
+            <div class="stat-item__num">
+              <span class="counter" data-target="4.9" data-suffix="" data-decimals="1">0</span>★
+            </div>
+            <div class="stat-item__label">Note moyenne</div>
           </div>
-          <div class="stat-block fade-in delay-2">
-            <div class="stat-block__number">30</div>
-            <div class="stat-block__label">Récitateurs du Coran</div>
+          <div class="stat-item reveal-fade delay-2">
+            <div class="stat-item__num">
+              <span class="counter" data-target="30" data-suffix="">0</span>
+            </div>
+            <div class="stat-item__label">Récitateurs</div>
           </div>
-          <div class="stat-block fade-in delay-3">
-            <div class="stat-block__number">6</div>
-            <div class="stat-block__label">Langues disponibles</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Story -->
-    <section class="section section--cream" aria-labelledby="story-title">
-      <div class="container">
-        <div style="max-width: 720px; margin: 0 auto; text-align: center;">
-          <span class="section-label">L'histoire</span>
-          <h2 class="section-title" id="story-title">Comment tout a commencé</h2>
-          <div class="ornament"><span class="ornament__symbol" aria-hidden="true">✦ ✦ ✦</span></div>
-          <div style="text-align: left; margin-top: 32px;">
-            <p style="color: var(--color-muted); line-height: 1.9; margin-bottom: 20px;">
-              Tout a commencé dans un appartement parisien, lors d'un Ramadan. En cherchant une façon d'immerger notre foyer dans l'ambiance coranique du mois sacré, nous réalisions qu'aucun produit ne répondait à nos attentes : soit trop basique, soit impossible à utiliser pour les parents non-spécialistes, soit franchement laid.
-            </p>
-            <p style="color: var(--color-muted); line-height: 1.9; margin-bottom: 20px;">
-              Avec l'aide de proches passionnés d'audio et de technologie, nous avons passé un an à développer ce que nous n'arrivions pas à trouver sur le marché. Un objet beau, simple, et spirituellement riche.
-            </p>
-            <p style="color: var(--color-muted); line-height: 1.9;">
-              NurSon Classic est le fruit de cette obsession. Nous ne faisons pas de compromis sur la qualité sonore, sur la rigueur du contenu islamique, ni sur l'esthétique. Parce que l'objet qui porte la parole d'Allah mérite d'être traité avec la plus haute considération.
-            </p>
+          <div class="stat-item reveal-fade delay-3">
+            <div class="stat-item__num">
+              <span class="counter" data-target="5" data-suffix="%">0</span>
+            </div>
+            <div class="stat-item__label">Reversé à des associations</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Team -->
-    <section class="section" aria-labelledby="team-title">
+    <!-- ======================== L'ÉQUIPE ======================== -->
+    <section class="section" id="equipe" aria-labelledby="equipe-title">
       <div class="container">
         <header class="section-header center">
-          <span class="section-label">L'équipe</span>
-          <h2 class="section-title" id="team-title">Créé par des musulmans,<br/>pour des musulmans</h2>
+          <span class="t-label reveal-fade">Les visages derrière NurSon</span>
+          <h2 class="t-headline reveal-fade delay-1" id="equipe-title" style="color: var(--white); margin-top: 12px;">
+            L'équipe
+          </h2>
+          <p class="section-header__sub reveal-fade delay-2">
+            Une petite équipe de passionnés, unie par la foi et la conviction que la beauté est un acte d'adoration.
+          </p>
         </header>
 
-        <div class="grid-3" style="max-width: 800px; margin: 0 auto;">
-          <div class="team-card fade-in">
-            <div class="team-card__img" aria-hidden="true">👨‍💼</div>
-            <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Karim A.</h3>
-            <p style="font-size: 0.85rem; color: var(--color-gold); font-weight: 600; margin-bottom: 8px;">Co-fondateur & CEO</p>
-            <p style="font-size: 0.875rem; color: var(--color-muted);">Passionné d'entrepreneuriat et de technologie. Père de famille, à l'origine du concept NurSon.</p>
+        <div class="team-grid">
+
+          <div class="team-card reveal-fade">
+            <div class="team-card__avatar" aria-hidden="true">
+              <span style="font-size: 2.5rem;">👤</span>
+            </div>
+            <div class="team-card__info">
+              <div class="team-card__name">Ibrahim Al-Fassi</div>
+              <div class="team-card__role t-label">Fondateur & Directeur</div>
+              <p class="team-card__bio">Ingénieur audio de formation, Ibrahim a passé 3 ans à développer le moteur sonore de NurSon. Sa vision : un son qui honore la parole divine.</p>
+            </div>
           </div>
 
-          <div class="team-card fade-in delay-2">
-            <div class="team-card__img" aria-hidden="true">👩‍💻</div>
-            <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Leila M.</h3>
-            <p style="font-size: 0.85rem; color: var(--color-gold); font-weight: 600; margin-bottom: 8px;">Co-fondatrice & Design</p>
-            <p style="font-size: 0.875rem; color: var(--color-muted);">Designer de formation, elle donne à NurSon son identité visuelle premium et élégante.</p>
+          <div class="team-card reveal-fade delay-1">
+            <div class="team-card__avatar" aria-hidden="true">
+              <span style="font-size: 2.5rem;">👤</span>
+            </div>
+            <div class="team-card__info">
+              <div class="team-card__name">Sana Benali</div>
+              <div class="team-card__role t-label">Directrice Créative</div>
+              <p class="team-card__bio">Designer produit et passionnée d'art islamique, Sana est à l'origine du langage visuel de NurSon — épuré, élégant, profondément enraciné dans notre esthétique.</p>
+            </div>
           </div>
 
-          <div class="team-card fade-in delay-3">
-            <div class="team-card__img" aria-hidden="true">👨‍🎓</div>
-            <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Sheikh Omar</h3>
-            <p style="font-size: 0.85rem; color: var(--color-gold); font-weight: 600; margin-bottom: 8px;">Conseiller islamique</p>
-            <p style="font-size: 0.875rem; color: var(--color-muted);">Imam et enseignant, il valide l'authenticité et la rigueur de tous nos contenus islamiques.</p>
+          <div class="team-card reveal-fade delay-2">
+            <div class="team-card__avatar" aria-hidden="true">
+              <span style="font-size: 2.5rem;">👤</span>
+            </div>
+            <div class="team-card__info">
+              <div class="team-card__name">Khalid Nouri</div>
+              <div class="team-card__role t-label">Responsable Contenu Islamique</div>
+              <p class="team-card__bio">Hafidh du Coran et étudiant en sciences islamiques, Khalid supervise la sélection de tous les récitateurs et la vérification de l'authenticité du contenu.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== CTA ======================== -->
+    <section class="cta-section" aria-labelledby="cta-about-title">
+      <div class="cta-section__inner">
+        <p class="t-arabic reveal-fade" style="font-size: clamp(1.5rem, 3vw, 2.8rem);" aria-label="Bismillah Ar-Rahman Ar-Rahim">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        <div style="display:flex; align-items:center; gap:16px; justify-content:center; margin:20px 0 32px; opacity:0.3;" aria-hidden="true">
+          <div style="flex:1; max-width:80px; height:1px; background:var(--border);"></div>
+          <span style="color:var(--gold); font-size:0.9rem;">✦</span>
+          <div style="flex:1; max-width:80px; height:1px; background:var(--border);"></div>
+        </div>
+        <h2 class="t-headline cta-section__title reveal-fade" id="cta-about-title">
+          Rejoignez la famille NurSon<br/>
+          <em style="color: var(--gold);">dès aujourd'hui</em>
+        </h2>
+        <p class="cta-section__sub reveal-fade delay-1">
+          Chaque commande est un acte de foi. Livraison offerte dès 60 €, retour gratuit sous 30 jours. Satisfaction garantie.
+        </p>
+        <div class="cta-section__actions reveal-fade delay-2">
+          <div class="mag-btn">
+            <a href="produit.html" class="btn btn-gold btn-lg">Découvrir NurSon Classic — 79,90 €</a>
+          </div>
+          <div class="mag-btn">
+            <a href="contact.html" class="btn btn-outline btn-lg">Nous contacter</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Engagement -->
-    <section class="section" aria-labelledby="engagement-title">
-      <div class="container">
-        <div class="cta-banner">
-          <h2 id="engagement-title">Notre engagement</h2>
-          <p>5% de chaque vente est reversé à des associations d'éducation islamique en France. Acheter NurSon, c'est aussi soutenir la transmission de notre foi.</p>
-          <div class="btn-group">
-            <a href="produit.html" class="btn btn-gold btn-lg">Découvrir NurSon Classic</a>
-            <a href="contact.html" class="btn btn-outline-white btn-lg">Nous contacter</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="index.html" class="logo">
-            <div class="logo__icon">☽</div>
-            Nur<span>Son</span>
+        <div>
+          <a href="index.html" class="nav__logo footer__logo" style="margin-bottom:16px; display:inline-flex;">
+            <div class="nav__logo-mark">☽</div>
+            Nur<em>Son</em>
           </a>
-          <p class="footer__brand-desc">NurSon est une marque française engagée à proposer des produits islamiques premium.</p>
-          <div class="footer__social">
+          <p class="footer__desc">Marque française de produits islamiques premium. Pensée par des musulmans, pour des musulmans.</p>
+          <div class="footer__social" aria-label="Réseaux sociaux">
             <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
             <a href="#" class="footer__social-link" aria-label="TikTok">📱</a>
             <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
           </div>
+          <div class="footer__pay" style="margin-top:20px;" aria-label="Paiements acceptés">
+            <span class="pay-chip">VISA</span>
+            <span class="pay-chip">MC</span>
+            <span class="pay-chip">STRIPE</span>
+            <span class="pay-chip">PAYPAL</span>
+          </div>
         </div>
         <div>
-          <h3 class="footer__col-title">Boutique</h3>
+          <div class="footer__col-title">Boutique</div>
           <ul class="footer__links">
             <li><a href="produit.html" class="footer__link">NurSon Classic</a></li>
             <li><a href="produit.html#features" class="footer__link">Caractéristiques</a></li>
+            <li><a href="produit.html#tab-reviews" class="footer__link">Avis clients</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="footer__col-title">Informations</h3>
+          <div class="footer__col-title">Marque</div>
           <ul class="footer__links">
-            <li><a href="a-propos.html" class="footer__link">À Propos</a></li>
+            <li><a href="a-propos.html" class="footer__link">Notre histoire</a></li>
+            <li><a href="a-propos.html#mission" class="footer__link">Mission & valeurs</a></li>
             <li><a href="contact.html" class="footer__link">Contact</a></li>
+            <li><a href="contact.html#faq" class="footer__link">FAQ</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="footer__col-title">Légal</h3>
+          <div class="footer__col-title">Légal</div>
           <ul class="footer__links">
             <li><a href="cgv.html" class="footer__link">CGV</a></li>
             <li><a href="mentions-legales.html" class="footer__link">Mentions légales</a></li>
+            <li><a href="mentions-legales.html#confidentialite" class="footer__link">Confidentialité</a></li>
+            <li><a href="mentions-legales.html#cookies" class="footer__link">Cookies</a></li>
           </ul>
         </div>
       </div>
       <hr class="divider" />
       <div class="footer__bottom">
-        <p>© 2024 NurSon. Tous droits réservés. Fait avec 🤍 en France.</p>
+        <span>© 2024 NurSon · Fait avec 🤍 en France</span>
         <div class="footer__bottom-links">
           <a href="cgv.html">CGV</a>
           <a href="mentions-legales.html">Mentions légales</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <div class="toast" role="alert" aria-live="polite"></div>
   <script src="js/main.js"></script>
 </body>
 </html>

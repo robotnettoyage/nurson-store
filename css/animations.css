@@ -1,162 +1,195 @@
 /* ============================================
-   NurSon — Animations & micro-interactions
+   NurSon — Animations avancées
    ============================================ */
 
-/* Fade-in on scroll */
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+/* ---- Tilt card effect (via JS) ---- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.1s linear;
+  will-change: transform;
 }
+.tilt-card__inner { transform: translateZ(20px); }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* ---- Parallax container ---- */
+[data-parallax] { will-change: transform; }
 
-.fade-in.delay-1 { transition-delay: 0.1s; }
-.fade-in.delay-2 { transition-delay: 0.2s; }
-.fade-in.delay-3 { transition-delay: 0.3s; }
-.fade-in.delay-4 { transition-delay: 0.4s; }
+/* ---- Text scramble placeholder ---- */
+.scramble-text { font-variant-numeric: tabular-nums; }
 
-/* Geometric ornament (Islamic-inspired geometric pattern as CSS) */
-.ornament {
+/* ---- Counter ---- */
+.counter { font-variant-numeric: tabular-nums; }
+
+/* ---- Loading screen ---- */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #080C0A;
+  z-index: 99999;
   display: flex;
-  justify-content: center;
-  margin: 16px 0;
-  gap: 8px;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
-
-.ornament::before,
-.ornament::after {
-  content: '';
-  flex: 1;
+.loader.done {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+.loader__logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #F0EDE6;
+  letter-spacing: 0.1em;
+}
+.loader__logo em { color: #C8A96E; font-style: normal; }
+.loader__arabic {
+  font-family: 'Amiri', serif;
+  font-size: 1.5rem;
+  color: rgba(200,169,110,0.6);
+  animation: fadeInUp 1s ease forwards;
+}
+.loader__bar {
+  width: 160px;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--color-gold-light), transparent);
-  max-width: 120px;
+  background: rgba(240,237,230,0.1);
+  border-radius: 1px;
+  overflow: hidden;
+}
+.loader__bar-fill {
+  height: 100%;
+  background: #C8A96E;
+  border-radius: 1px;
+  width: 0%;
+  animation: loaderFill 1.4s var(--ease-out) forwards;
+}
+@keyframes loaderFill { to { width: 100%; } }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.ornament__symbol {
-  color: var(--color-gold);
-  font-size: 1.1rem;
-  letter-spacing: 8px;
-}
+/* ---- Islamic star SVG animation ---- */
+.star-svg { pointer-events: none; }
+.star-outer { animation: geoRotate 80s linear infinite; transform-origin: center; }
+.star-inner { animation: geoRotate 50s linear infinite reverse; transform-origin: center; }
+.star-mid { animation: geoRotate 30s linear infinite; transform-origin: center; }
 
-/* Shimmer loading placeholder */
-@keyframes shimmer {
-  0% { background-position: -400px 0; }
-  100% { background-position: 400px 0; }
+/* ---- Glow ring ---- */
+@keyframes ringPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.04); }
 }
+.ring-pulse { animation: ringPulse 3s ease-in-out infinite; }
 
-.skeleton {
-  background: linear-gradient(90deg,
-    var(--color-cream) 0%,
-    var(--color-border) 50%,
-    var(--color-cream) 100%
-  );
-  background-size: 800px 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: var(--radius-sm);
+/* ---- Gradient border ---- */
+.gradient-border {
+  position: relative;
+  border-radius: var(--radius-md);
 }
-
-/* Pulse animation for CTA badges */
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(200,169,110,0.4), transparent 50%, rgba(200,169,110,0.1));
+  pointer-events: none;
+  z-index: 0;
 }
+.gradient-border > * { position: relative; z-index: 1; }
 
-.pulse {
-  animation: pulse 2.5s ease-in-out infinite;
+/* ---- Shine sweep ---- */
+@keyframes shineSweep {
+  from { transform: translateX(-100%) skewX(-15deg); }
+  to { transform: translateX(200%) skewX(-15deg); }
 }
-
-/* Star rating hover animation */
-.rating-stars {
-  display: inline-flex;
-  gap: 2px;
-}
-
-/* Button ripple */
-.btn {
+.shine-sweep {
   position: relative;
   overflow: hidden;
 }
-
-.btn::after {
+.shine-sweep::after {
   content: '';
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  animation: shineSweep 4s ease-in-out infinite 2s;
+}
+
+/* ---- Scroll progress bar ---- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-bright));
+  z-index: 10001;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ---- Stagger children ---- */
+.stagger-children > *:nth-child(1) { transition-delay: 0s; }
+.stagger-children > *:nth-child(2) { transition-delay: 0.08s; }
+.stagger-children > *:nth-child(3) { transition-delay: 0.16s; }
+.stagger-children > *:nth-child(4) { transition-delay: 0.24s; }
+.stagger-children > *:nth-child(5) { transition-delay: 0.32s; }
+.stagger-children > *:nth-child(6) { transition-delay: 0.40s; }
+
+/* ---- Active line indicator ---- */
+.nav__link.active::after { animation: none; width: 100%; }
+
+/* ---- Product floating ring ---- */
+.product-ring-1, .product-ring-2, .product-ring-3 {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(200,169,110,0.15);
   top: 50%;
   left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255,255,255,0.15);
-  border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
-  opacity: 0;
+  pointer-events: none;
 }
+.product-ring-1 { width: 120%; height: 120%; animation: ringPulse 4s ease-in-out infinite; }
+.product-ring-2 { width: 140%; height: 140%; animation: ringPulse 4s ease-in-out infinite 1s; }
+.product-ring-3 { width: 160%; height: 160%; animation: ringPulse 4s ease-in-out infinite 2s; }
 
-.btn:active::after {
-  width: 200px;
-  height: 200px;
-  opacity: 1;
-  transition: 0s;
+/* ---- FAQ accordion ---- */
+details[open] summary { color: var(--gold); }
+details summary {
+  padding: 20px 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-dim);
+  transition: color 0.3s;
 }
-
-/* Hero gradient animation */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+details summary .chevron {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border-dim);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  transition: transform 0.3s, border-color 0.3s;
+  color: var(--gold);
 }
-
-/* Announcement bar fade */
-.announcement-bar span {
-  transition: opacity 0.3s ease;
+details[open] summary .chevron { transform: rotate(180deg); border-color: var(--gold); }
+details .faq-body {
+  padding: 16px 0 20px;
+  font-size: 0.875rem;
+  color: var(--white-60);
+  line-height: 1.75;
+  border-bottom: 1px solid var(--border-dim);
 }
-
-/* Product image hover zoom */
-.gallery__main {
-  overflow: hidden;
-}
-
-.gallery__main img {
-  transition: transform 0.5s ease;
-}
-
-.gallery__main:hover img {
-  transform: scale(1.03);
-}
-
-/* Card hover lift already in style.css */
-
-/* Icon circle bounce */
-@keyframes iconBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-.value-card:hover .value-card__icon {
-  animation: iconBounce 0.6s ease;
-  border-color: var(--color-gold);
-  background: rgba(200,169,110,0.1);
-}
-
-/* Geometric ornament SVG-like pattern in CSS */
-.geo-pattern {
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      rgba(200,169,110,0.04) 0px,
-      rgba(200,169,110,0.04) 1px,
-      transparent 1px,
-      transparent 20px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(200,169,110,0.04) 0px,
-      rgba(200,169,110,0.04) 1px,
-      transparent 1px,
-      transparent 20px
-    );
-}
+details .faq-body a { color: var(--gold); }

@@ -3,511 +3,376 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
-  <title>NurSon Classic — Enceinte Coranique Premium | Achetez maintenant</title>
-  <meta name="description" content="NurSon Classic : enceinte coranique premium avec Coran complet, 30 récitateurs, douas et nasheeds. Son haute-fidélité, 12h d'autonomie, design épuré. 79,90€ — Livraison France." />
+  <title>NurSon Classic — Enceinte Coranique Premium | 79,90€</title>
+  <meta name="description" content="NurSon Classic : enceinte coranique premium. Coran complet, 30 récitateurs, douas, nasheeds. Son HD, 12h autonomie, design épuré. 79,90€ · Livraison France." />
   <link rel="canonical" href="https://nurson.fr/produit.html" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="product" />
   <meta property="og:url" content="https://nurson.fr/produit.html" />
   <meta property="og:title" content="NurSon Classic — Enceinte Coranique Premium" />
-  <meta property="og:description" content="Enceinte coranique premium avec Coran complet, 30 récitateurs, douas, nasheeds. 79,90€." />
   <meta property="og:image" content="https://nurson.fr/images/product-og.jpg" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
-
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 
-  <!-- Schema.org Product -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "NurSon Classic — Enceinte Coranique Premium",
-    "image": [
-      "https://nurson.fr/images/product-1.jpg",
-      "https://nurson.fr/images/product-2.jpg"
-    ],
-    "description": "Enceinte coranique premium avec le Coran complet, 30 récitateurs, traductions multilingues, douas quotidiennes et nasheeds. Son haute-fidélité, 12h d'autonomie, design minimaliste.",
-    "sku": "NURSON-CLASSIC-001",
-    "brand": {
-      "@type": "Brand",
-      "name": "NurSon"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://nurson.fr/produit.html",
-      "priceCurrency": "EUR",
-      "price": "79.90",
-      "priceValidUntil": "2025-12-31",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "NurSon"
-      }
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": { "@type": "Person", "name": "Fatima M." },
-        "reviewBody": "NurSon a transformé notre matinée. Mes enfants se réveillent maintenant au son du Coran. La qualité audio est vraiment exceptionnelle."
-      }
-    ]
-  }
+  {"@context":"https://schema.org/","@type":"Product","name":"NurSon Classic — Enceinte Coranique Premium","description":"Enceinte coranique premium avec Coran complet, 30 récitateurs, traductions multilingues, douas quotidiennes et nasheeds.","sku":"NURSON-CLASSIC-001","brand":{"@type":"Brand","name":"NurSon"},"offers":{"@type":"Offer","url":"https://nurson.fr/produit.html","priceCurrency":"EUR","price":"79.90","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"NurSon"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"127"}}
   </script>
 </head>
 <body>
 
-  <!-- Announcement Bar -->
-  <div class="announcement-bar">
-    <span>🌙 Livraison offerte dès 60€ · Retour gratuit 30 jours · Paiement sécurisé Stripe</span>
+  <div id="loader" class="loader">
+    <div class="loader__arabic">نُورٌ</div>
+    <div class="loader__logo">Nur<em>Son</em></div>
+    <div class="loader__bar"><div class="loader__bar-fill"></div></div>
   </div>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="index.html" class="logo">
-          <div class="logo__icon">☽</div>
-          Nur<span>Son</span>
-        </a>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="scroll-progress"></div>
 
-        <nav class="nav" aria-label="Navigation principale">
+  <div class="announcement-bar">
+    <span style="transition: opacity 0.4s, transform 0.4s;">🌙 LIVRAISON OFFERTE DÈS 60€ · RETOUR GRATUIT 30 JOURS · PAIEMENT SÉCURISÉ STRIPE</span>
+  </div>
+
+  <nav class="nav" role="navigation" aria-label="Navigation principale">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <div class="nav__logo-mark">☽</div>
+          Nur<em>Son</em>
+        </a>
+        <div class="nav__links">
           <a href="index.html" class="nav__link">Accueil</a>
-          <a href="produit.html" class="nav__link">Notre Produit</a>
+          <a href="produit.html" class="nav__link">Produit</a>
           <a href="a-propos.html" class="nav__link">À Propos</a>
           <a href="contact.html" class="nav__link">Contact</a>
-        </nav>
-
-        <div class="header__actions">
-          <a href="produit.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.875rem;">Commander</a>
-          <button class="btn-cart" aria-label="Panier">
-            🛒
-            <span class="cart-badge" style="display:none;">0</span>
-          </button>
-          <button class="menu-toggle" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
+        </div>
+        <div class="nav__cta">
+          <a href="produit.html" class="btn btn-gold" style="padding:12px 24px; font-size:0.75rem;">Commander →</a>
+          <button class="nav__menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Mobile Nav -->
   <nav class="mobile-nav">
     <button class="mobile-nav__close">✕</button>
     <a href="index.html" class="mobile-nav__link">Accueil</a>
-    <a href="produit.html" class="mobile-nav__link">Notre Produit</a>
+    <a href="produit.html" class="mobile-nav__link">Produit</a>
     <a href="a-propos.html" class="mobile-nav__link">À Propos</a>
     <a href="contact.html" class="mobile-nav__link">Contact</a>
-    <a href="produit.html" class="btn btn-primary btn-full mt-24">Commander maintenant</a>
+    <a href="produit.html" class="btn btn-gold btn-full mt-32">Commander maintenant</a>
   </nav>
 
   <main>
-    <div class="container">
-      <!-- Breadcrumb -->
-      <nav class="breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span class="breadcrumb__sep" aria-hidden="true">/</span>
-        <a href="produit.html">Produits</a>
-        <span class="breadcrumb__sep" aria-hidden="true">/</span>
-        <span>NurSon Classic</span>
-      </nav>
+    <div class="product-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb__sep">/</span>
+          <a href="produit.html">Boutique</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>NurSon Classic</span>
+        </nav>
 
-      <!-- Product Section -->
-      <section class="section" style="padding-top: 24px;" aria-labelledby="product-title">
-        <div class="product-layout">
+        <section class="product-layout" style="padding: 40px 0 80px;" aria-labelledby="product-title">
 
           <!-- Gallery -->
-          <div class="product-gallery">
-            <div class="gallery__main">
-              <!-- Replace with actual product images -->
-              <div id="gallery-main-placeholder" style="width:100%; height:100%; background: linear-gradient(145deg, #2D5C44 0%, #1B3D2F 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; aspect-ratio:1; border-radius: var(--radius-lg);">
-                <div style="font-size: 6rem;" aria-hidden="true">🔊</div>
-                <p style="color:rgba(255,255,255,0.5); font-size:0.8rem; text-align:center; padding:0 20px;">Photo produit HD<br/>à insérer ici</p>
-                <div class="arabic" style="color: rgba(200,169,110,0.7);" aria-hidden="true">نُورٌ</div>
-              </div>
+          <div class="product-gallery__sticky">
+            <div class="gallery-main shine-sweep" role="img" aria-label="NurSon Classic enceinte coranique">
+              <div style="font-size:7rem; z-index:1; position:relative; animation:float 6s ease-in-out infinite;" aria-hidden="true">🔊</div>
+              <div class="t-arabic" style="position:relative; z-index:1;" aria-label="Nur — Lumière">نُورٌ</div>
+              <p style="color:rgba(240,237,230,0.2); font-size:0.75rem; z-index:1; position:relative; text-align:center; padding:0 20px;">Insérer ici vos photos produit HD</p>
             </div>
-            <div class="gallery__thumbs">
-              <div class="gallery__thumb active" aria-label="Vue 1">
-                <div style="width:100%; height:100%; background: linear-gradient(135deg, #2D5C44, #1B3D2F); display:flex; align-items:center; justify-content:center; font-size:1.5rem; aspect-ratio:1;">🔊</div>
-              </div>
-              <div class="gallery__thumb" aria-label="Vue 2">
-                <div style="width:100%; height:100%; background: linear-gradient(135deg, #3D7A5C, #2D5C44); display:flex; align-items:center; justify-content:center; font-size:1.5rem; aspect-ratio:1;">🎵</div>
-              </div>
-              <div class="gallery__thumb" aria-label="Vue 3">
-                <div style="width:100%; height:100%; background: linear-gradient(135deg, #1B3D2F, #0F2318); display:flex; align-items:center; justify-content:center; font-size:1.5rem; aspect-ratio:1;">📻</div>
-              </div>
-              <div class="gallery__thumb" aria-label="Vue 4">
-                <div style="width:100%; height:100%; background: linear-gradient(135deg, #2A2A2A, #1A1A1A); display:flex; align-items:center; justify-content:center; font-size:1.5rem; aspect-ratio:1;">🌙</div>
-              </div>
+            <div class="gallery-thumbs">
+              <div class="gallery-thumb active" aria-label="Vue principale" role="button">🔊</div>
+              <div class="gallery-thumb" aria-label="Vue de face" role="button">🎵</div>
+              <div class="gallery-thumb" aria-label="Vue de côté" role="button">📻</div>
+              <div class="gallery-thumb" aria-label="Photo lifestyle" role="button">🌙</div>
             </div>
           </div>
 
-          <!-- Product Info -->
-          <div class="product-info">
-            <div class="product-info__brand">NurSon</div>
-            <h1 class="product-info__title" id="product-title">NurSon Classic<br/>Enceinte Coranique Premium</h1>
+          <!-- Product info -->
+          <div>
+            <div class="product-info__brand reveal-fade">
+              <span class="t-label">NurSon</span>
+            </div>
+            <h1 class="t-headline product-info__title reveal-fade delay-1" id="product-title">
+              NurSon Classic<br/>
+              <em style="font-style:italic; color:var(--gold);">Enceinte Coranique</em>
+            </h1>
 
-            <div class="product-info__rating">
-              <div class="rating-stars" aria-label="4.9 étoiles sur 5">★★★★★</div>
-              <span class="rating-count">4.9/5 · <a href="#reviews" style="color: var(--color-gold); text-decoration: underline;">127 avis</a></span>
-              <span class="badge badge-green" style="margin-left: 8px;">En stock</span>
+            <div class="product-info__rating reveal-fade delay-2">
+              <div class="stars" aria-label="4.9 étoiles sur 5">★★★★★</div>
+              <span class="count">4,9 / 5 · <a href="#tab-reviews" style="color:var(--gold); text-decoration:underline;">127 avis</a></span>
+              <span style="background:rgba(200,169,110,0.15); color:var(--gold); font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:4px 10px; border-radius:var(--radius-full); border:1px solid var(--border);">En stock</span>
             </div>
 
-            <div class="product-info__price-wrap">
-              <span class="price-main">79,90 €</span>
-              <span class="price-old">99,90 €</span>
-              <span class="price-badge">−20%</span>
+            <div class="product-price-wrap reveal-fade delay-3">
+              <span class="product-price">79,90 €</span>
+              <span class="product-price-old">99,90 €</span>
+              <span class="product-price-tag">−20% · Offre limitée</span>
             </div>
 
-            <p class="product-info__desc">
-              NurSon Classic est l'enceinte coranique premium conçue pour les foyers musulmans. Avec le Coran complet intégré, 30 récitateurs renommés, des douas quotidiennes et des nasheeds apaisants — elle accompagne chaque moment de votre journée spirituelle dans une qualité sonore exceptionnelle.
+            <p class="product-desc reveal-fade" style="transition-delay:0.35s;">
+              NurSon Classic est l'enceinte coranique premium conçue pour les foyers musulmans. Coran complet intégré, 30 récitateurs renommés, douas quotidiennes et nasheeds apaisants — dans une qualité sonore qui honore la parole d'Allah.
             </p>
 
             <!-- Color option -->
-            <div class="product-options">
-              <div class="option-label">Coloris : <strong>Noir Minuit</strong></div>
-              <div class="option-group" role="group" aria-label="Choisir un coloris">
-                <button class="option-btn active" aria-pressed="true">Noir Minuit</button>
-                <button class="option-btn" aria-pressed="false">Beige Sable</button>
-                <button class="option-btn" aria-pressed="false">Vert Forêt</button>
+            <div class="reveal-fade" style="transition-delay:0.4s;">
+              <div class="option-group-label">Coloris</div>
+              <div class="option-group">
+                <button class="option-btn active">Noir Minuit</button>
+                <button class="option-btn">Beige Sable</button>
+                <button class="option-btn">Vert Forêt</button>
               </div>
             </div>
 
             <!-- Quantity -->
-            <div class="product-options">
-              <div class="option-label">Quantité</div>
-              <div class="qty-wrap" role="group" aria-label="Sélecteur de quantité">
-                <button class="qty-btn qty-minus" aria-label="Diminuer la quantité">−</button>
+            <div class="reveal-fade" style="transition-delay:0.45s;">
+              <div class="option-group-label">Quantité</div>
+              <div class="qty-wrap" role="group" aria-label="Quantité">
+                <button class="qty-btn qty-minus" aria-label="Diminuer">−</button>
                 <input type="number" class="qty-input" value="1" min="1" max="99" aria-label="Quantité" />
-                <button class="qty-btn qty-plus" aria-label="Augmenter la quantité">+</button>
+                <button class="qty-btn qty-plus" aria-label="Augmenter">+</button>
               </div>
             </div>
 
-            <!-- CTA Buttons -->
-            <div class="add-to-cart-wrap">
-              <button
-                class="btn btn-gold btn-lg"
-                style="flex: 1;"
-                onclick="redirectToStripe('price_nurson_classic')"
-                aria-label="Acheter NurSon Classic pour 79,90€"
-              >
-                🛍️ Acheter maintenant — 79,90 €
+            <!-- CTAs -->
+            <div class="product-cta-wrap reveal-fade" style="transition-delay:0.5s;">
+              <div class="mag-btn">
+                <button class="btn btn-gold btn-lg btn-full" onclick="redirectToStripe('price_nurson_classic')" aria-label="Acheter NurSon Classic 79,90€">
+                  Acheter maintenant — 79,90 € →
+                </button>
+              </div>
+              <button class="btn btn-outline btn-full btn-add-to-cart">
+                Ajouter au panier
               </button>
             </div>
-            <button
-              class="btn btn-outline btn-full btn-add-to-cart"
-              aria-label="Ajouter au panier"
-            >
-              Ajouter au panier
-            </button>
 
-            <!-- Trust badges -->
-            <div class="product-guarantees" aria-label="Garanties">
-              <div class="guarantee-item">
-                <span class="guarantee-item__icon" aria-hidden="true">🔒</span>
-                <div class="guarantee-item__text">Paiement<br/>sécurisé SSL</div>
+            <!-- Trust -->
+            <div class="product-trust reveal-fade" style="transition-delay:0.55s;">
+              <div class="product-trust-item">
+                <div class="icon" aria-hidden="true">🔒</div>
+                <div class="text">Paiement<br/>sécurisé SSL</div>
               </div>
-              <div class="guarantee-item">
-                <span class="guarantee-item__icon" aria-hidden="true">↩️</span>
-                <div class="guarantee-item__text">Retour gratuit<br/>30 jours</div>
+              <div class="product-trust-item">
+                <div class="icon" aria-hidden="true">↩️</div>
+                <div class="text">Retour gratuit<br/>30 jours</div>
               </div>
-              <div class="guarantee-item">
-                <span class="guarantee-item__icon" aria-hidden="true">🚚</span>
-                <div class="guarantee-item__text">Livraison offerte<br/>dès 60€</div>
+              <div class="product-trust-item">
+                <div class="icon" aria-hidden="true">🚚</div>
+                <div class="text">Expédition<br/>24–48h</div>
               </div>
             </div>
 
-            <!-- Delivery info -->
-            <div style="background: var(--color-cream); border-radius: var(--radius-md); padding: 16px 20px; margin-top: 20px; border: 1px solid var(--color-border);">
-              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.875rem; color: var(--color-text);">
-                <span aria-hidden="true">📦</span>
-                <span><strong>Expédié sous 24–48h</strong> · Livraison France 5,90€ (offerte dès 60€)</span>
-              </div>
+            <!-- Delivery note -->
+            <div class="reveal-fade" style="transition-delay:0.6s; margin-top:20px; padding:16px 20px; background:var(--white-10); border:1px solid var(--border-dim); border-radius:var(--radius-md);">
+              <p style="font-size:0.82rem; color:var(--white-60); margin:0;">
+                📦 <strong style="color:var(--white);">Expédié sous 24–48h</strong> · France 5,90€ (offerte dès 60€) · Belgique/Suisse 8,90€
+              </p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <!-- Product Tabs -->
+        <!-- Tabs -->
         <div class="product-tabs" id="features">
-          <div class="tabs__nav" role="tablist" aria-label="Informations produit">
-            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-desc">Description</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-features">Caractéristiques</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-specs">Fiche technique</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-reviews">Avis (127)</button>
+          <div class="tabs-nav" role="tablist" aria-label="Informations produit">
+            <button class="tab-btn active" role="tab" aria-selected="true" id="tab-desc-btn">Description</button>
+            <button class="tab-btn" role="tab" aria-selected="false" id="tab-feat-btn">Caractéristiques</button>
+            <button class="tab-btn" role="tab" aria-selected="false" id="tab-spec-btn">Fiche technique</button>
+            <button class="tab-btn" role="tab" aria-selected="false" id="tab-rev-btn">Avis (127)</button>
           </div>
 
-          <!-- Tab: Description -->
+          <!-- Description -->
           <div class="tab-panel active" id="tab-desc" role="tabpanel">
-            <div class="grid-2" style="gap: 48px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;">
               <div>
-                <h2 style="font-size: 1.6rem; margin-bottom: 20px;">Une expérience spirituelle<br/>sans compromis</h2>
-                <p>NurSon Classic a été développée avec une obsession pour le détail : chaque composant audio, chaque fichier sonore, chaque finition a été soigneusement sélectionné pour offrir une expérience digne de la parole divine.</p>
-                <p>Que vous souhaitiez vous ressourcer après une longue journée, créer une ambiance spirituelle dans votre maison, ou initier vos enfants au Coran — NurSon est votre compagnon de foi.</p>
-                <div class="arabic mt-16" aria-label="Wa in tanussou ni'matallah">وَإِن تَعُدُّوا نِعْمَةَ اللَّهِ</div>
-                <p style="text-align:center; font-size:0.85rem; color: var(--color-muted);">"Si vous comptiez les bienfaits d'Allah..." — Ibrahim : 34</p>
+                <h2 class="t-title" style="color:var(--white); margin-bottom:20px;">Une expérience spirituelle<br/>sans compromis</h2>
+                <p class="t-body" style="margin-bottom:16px;">NurSon Classic a été développée avec une obsession pour chaque détail : chaque composant audio, chaque fichier sonore, chaque finition soigneusement sélectionné pour offrir une expérience digne de la parole divine.</p>
+                <p class="t-body">Que vous souhaitiez vous ressourcer, créer une ambiance spirituelle ou initier vos enfants au Coran — NurSon est votre compagnon de foi.</p>
+                <div class="t-arabic" style="margin-top:24px; font-size:1.6rem;" aria-label="Bismillah">بِسْمِ اللَّهِ</div>
               </div>
               <div>
-                <h3 style="font-size: 1.1rem; margin-bottom: 16px;">Ce qui est inclus</h3>
-                <ul style="display: flex; flex-direction: column; gap: 10px;">
-                  <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-                    <span style="color: var(--color-gold); flex-shrink:0;" aria-hidden="true">✦</span>
-                    <span><strong>1x NurSon Classic</strong> — enceinte coranique premium</span>
+                <div class="t-label" style="margin-bottom:16px;">Ce qui est inclus</div>
+                <ul style="display:flex; flex-direction:column; gap:12px;">
+                  <li style="display:flex; gap:12px; align-items:flex-start;">
+                    <span style="color:var(--gold); flex-shrink:0; font-size:0.7rem; margin-top:3px;">✦</span>
+                    <span class="t-small" style="color:var(--white-60);"><strong style="color:var(--white);">1× NurSon Classic</strong> — enceinte coranique premium</span>
                   </li>
-                  <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-                    <span style="color: var(--color-gold); flex-shrink:0;" aria-hidden="true">✦</span>
-                    <span><strong>1x Câble USB-C</strong> — charge rapide incluse</span>
+                  <li style="display:flex; gap:12px; align-items:flex-start;">
+                    <span style="color:var(--gold); flex-shrink:0; font-size:0.7rem; margin-top:3px;">✦</span>
+                    <span class="t-small" style="color:var(--white-60);"><strong style="color:var(--white);">1× Câble USB-C</strong> — charge rapide incluse</span>
                   </li>
-                  <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-                    <span style="color: var(--color-gold); flex-shrink:0;" aria-hidden="true">✦</span>
-                    <span><strong>1x Guide d'utilisation</strong> en français et arabe</span>
+                  <li style="display:flex; gap:12px; align-items:flex-start;">
+                    <span style="color:var(--gold); flex-shrink:0; font-size:0.7rem; margin-top:3px;">✦</span>
+                    <span class="t-small" style="color:var(--white-60);"><strong style="color:var(--white);">1× Guide d'utilisation</strong> français & arabe</span>
                   </li>
-                  <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-                    <span style="color: var(--color-gold); flex-shrink:0;" aria-hidden="true">✦</span>
-                    <span><strong>Emballage cadeau premium</strong> — boîte NurSon</span>
+                  <li style="display:flex; gap:12px; align-items:flex-start;">
+                    <span style="color:var(--gold); flex-shrink:0; font-size:0.7rem; margin-top:3px;">✦</span>
+                    <span class="t-small" style="color:var(--white-60);"><strong style="color:var(--white);">Packaging premium</strong> — boîte NurSon cadeau</span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Tab: Features -->
+          <!-- Features -->
           <div class="tab-panel" id="tab-features" role="tabpanel">
-            <div class="features-list">
-              <div class="feature-item">
-                <span class="feature-item__icon" aria-hidden="true">📖</span>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">📖</div>
                 <div>
-                  <div class="feature-item__title">Coran complet</div>
-                  <div class="feature-item__text">114 sourates, intégralité du Saint Coran pré-chargé sur mémoire interne.</div>
+                  <div class="feature-card__title">Coran complet</div>
+                  <div class="feature-card__text">114 sourates, intégralité du Saint Coran pré-chargé sur mémoire interne 8Go.</div>
                 </div>
               </div>
-              <div class="feature-item">
-                <span class="feature-item__icon" aria-hidden="true">🎙️</span>
+              <div class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">🎙️</div>
                 <div>
-                  <div class="feature-item__title">30 récitateurs</div>
-                  <div class="feature-item__text">Sheikh Al-Ghamdi, Al-Minshawi, Mishary Alafasy et bien d'autres grands imams.</div>
+                  <div class="feature-card__title">30 récitateurs</div>
+                  <div class="feature-card__text">Sheikh Al-Ghamdi, Al-Minshawi, Mishary Alafasy et bien d'autres grands imams.</div>
                 </div>
               </div>
-              <div class="feature-item">
-                <span class="feature-item__icon" aria-hidden="true">🌍</span>
+              <div class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">🌍</div>
                 <div>
-                  <div class="feature-item__title">6 langues</div>
-                  <div class="feature-item__text">Traductions en français, anglais, arabe, ourdou, indonésien, espagnol.</div>
+                  <div class="feature-card__title">6 langues</div>
+                  <div class="feature-card__text">Traductions en français, anglais, arabe, ourdou, indonésien, espagnol.</div>
                 </div>
               </div>
-              <div class="feature-item">
-                <span class="feature-item__icon" aria-hidden="true">🤲</span>
+              <div class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">🤲</div>
                 <div>
-                  <div class="feature-item__title">Douas & Dhikr</div>
-                  <div class="feature-item__text">200+ douas quotidiennes : matin, soir, repas, voyage, sommeil...</div>
+                  <div class="feature-card__title">200+ Douas & Dhikr</div>
+                  <div class="feature-card__text">Douas quotidiennes : matin, soir, repas, voyage, sommeil, les 99 noms d'Allah.</div>
                 </div>
               </div>
-              <div class="feature-item">
-                <span class="feature-item__icon" aria-hidden="true">🎵</span>
+              <div class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">🎵</div>
                 <div>
-                  <div class="feature-item__title">Nasheeds</div>
-                  <div class="feature-item__text">Collection de nasheeds islamiques sélectionnés pour leur spiritualité et leur beauté.</div>
+                  <div class="feature-card__title">Nasheeds premium</div>
+                  <div class="feature-card__text">Collection de nasheeds islamiques sélectionnés pour leur beauté spirituelle.</div>
                 </div>
               </div>
-              <div class="feature-item">
-                <span class="feature-item__icon" aria-hidden="true">🌙</span>
+              <div class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">🌙</div>
                 <div>
-                  <div class="feature-item__title">Mode nuit & minuterie</div>
-                  <div class="feature-item__text">Arrêt automatique programmable de 15 min à 2h — parfait pour s'endormir.</div>
+                  <div class="feature-card__title">Mode nuit & minuterie</div>
+                  <div class="feature-card__text">Arrêt automatique 15 min–2h, volume progressif. Parfait pour s'endormir.</div>
                 </div>
               </div>
-              <div class="feature-item">
-                <span class="feature-item__icon" aria-hidden="true">📡</span>
+              <div class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">📡</div>
                 <div>
-                  <div class="feature-item__title">Bluetooth & USB</div>
-                  <div class="feature-item__text">Connectez votre smartphone via Bluetooth 5.0 ou diffusez depuis une clé USB.</div>
+                  <div class="feature-card__title">Bluetooth 5.0 & USB</div>
+                  <div class="feature-card__text">Connectez votre smartphone ou diffusez depuis une clé USB ou carte SD.</div>
                 </div>
               </div>
-              <div class="feature-item">
-                <span class="feature-item__icon" aria-hidden="true">⚡</span>
+              <div class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">⚡</div>
                 <div>
-                  <div class="feature-item__title">12h d'autonomie</div>
-                  <div class="feature-item__text">Batterie rechargeable 2200 mAh — parfaite pour voyager ou pour le Ramadan.</div>
+                  <div class="feature-card__title">12h d'autonomie</div>
+                  <div class="feature-card__text">Batterie rechargeable 2200mAh USB-C. Idéale pour le Ramadan et les voyages.</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Tab: Specs -->
+          <!-- Specs -->
           <div class="tab-panel" id="tab-specs" role="tabpanel">
             <table class="specs-table" aria-label="Fiche technique NurSon Classic">
               <tbody>
-                <tr>
-                  <td>Dimensions</td>
-                  <td>14 × 8 × 6 cm</td>
-                </tr>
-                <tr>
-                  <td>Poids</td>
-                  <td>380g</td>
-                </tr>
-                <tr>
-                  <td>Puissance sonore</td>
-                  <td>5W RMS</td>
-                </tr>
-                <tr>
-                  <td>Réponse en fréquence</td>
-                  <td>80Hz – 20kHz</td>
-                </tr>
-                <tr>
-                  <td>Batterie</td>
-                  <td>2200 mAh Li-ion</td>
-                </tr>
-                <tr>
-                  <td>Autonomie</td>
-                  <td>12h à volume modéré</td>
-                </tr>
-                <tr>
-                  <td>Charge</td>
-                  <td>USB-C 5V/1A (2h30 env.)</td>
-                </tr>
-                <tr>
-                  <td>Connectivité</td>
-                  <td>Bluetooth 5.0, USB-A, carte SD</td>
-                </tr>
-                <tr>
-                  <td>Mémoire interne</td>
-                  <td>8GB</td>
-                </tr>
-                <tr>
-                  <td>Langues</td>
-                  <td>FR, EN, AR, UR, ID, ES</td>
-                </tr>
-                <tr>
-                  <td>Matériaux</td>
-                  <td>ABS premium + textile tissé</td>
-                </tr>
-                <tr>
-                  <td>Garantie</td>
-                  <td>12 mois constructeur</td>
-                </tr>
-                <tr>
-                  <td>Contenu préchargé</td>
-                  <td>Coran complet, 30 récitateurs, 200+ douas, nasheeds</td>
-                </tr>
+                <tr><td>Dimensions</td><td>14 × 8 × 6 cm</td></tr>
+                <tr><td>Poids</td><td>380 g</td></tr>
+                <tr><td>Puissance sonore</td><td>5W RMS</td></tr>
+                <tr><td>Réponse en fréquence</td><td>80 Hz – 20 kHz</td></tr>
+                <tr><td>Batterie</td><td>2200 mAh Li-ion</td></tr>
+                <tr><td>Autonomie</td><td>12h à volume modéré</td></tr>
+                <tr><td>Charge</td><td>USB-C 5V/1A (~2h30)</td></tr>
+                <tr><td>Connectivité</td><td>Bluetooth 5.0, USB-A, SD</td></tr>
+                <tr><td>Mémoire interne</td><td>8 Go</td></tr>
+                <tr><td>Langues</td><td>FR, EN, AR, UR, ID, ES</td></tr>
+                <tr><td>Matériaux</td><td>ABS premium + textile tissé</td></tr>
+                <tr><td>Garantie</td><td>12 mois constructeur</td></tr>
+                <tr><td>Contenu préchargé</td><td>Coran complet, 30 récitateurs, 200+ douas, nasheeds</td></tr>
               </tbody>
             </table>
           </div>
 
-          <!-- Tab: Reviews -->
-          <div class="tab-panel" id="tab-reviews" role="tabpanel" id="reviews">
-            <div style="display: flex; align-items: center; gap: 32px; margin-bottom: 40px; padding: 28px; background: var(--color-cream); border-radius: var(--radius-md);">
-              <div style="text-align: center;">
-                <div style="font-family: var(--font-heading); font-size: 4rem; font-weight: 700; color: var(--color-green); line-height: 1;">4.9</div>
-                <div style="color: var(--color-gold); font-size: 1.3rem; letter-spacing: 3px;">★★★★★</div>
-                <div style="font-size: 0.85rem; color: var(--color-muted); margin-top: 4px;">127 avis vérifiés</div>
+          <!-- Reviews -->
+          <div class="tab-panel" id="tab-reviews" role="tabpanel">
+            <div class="reviews-summary">
+              <div>
+                <div class="reviews-big-num">4.9</div>
+                <div class="reviews-big-stars" aria-label="4.9 étoiles sur 5">★★★★★</div>
+                <div class="reviews-big-count">127 avis vérifiés</div>
               </div>
-              <div style="flex: 1;">
-                <div style="display: flex; flex-direction: column; gap: 6px;">
-                  <div style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem;">
-                    <span style="width: 20px; text-align: right;">5★</span>
-                    <div style="flex:1; height:8px; background: var(--color-border); border-radius: 4px; overflow:hidden;">
-                      <div style="width:91%; height:100%; background: var(--color-gold); border-radius:4px;"></div>
-                    </div>
-                    <span style="color: var(--color-muted);">91%</span>
-                  </div>
-                  <div style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem;">
-                    <span style="width: 20px; text-align: right;">4★</span>
-                    <div style="flex:1; height:8px; background: var(--color-border); border-radius: 4px; overflow:hidden;">
-                      <div style="width:7%; height:100%; background: var(--color-gold); border-radius:4px;"></div>
-                    </div>
-                    <span style="color: var(--color-muted);">7%</span>
-                  </div>
-                  <div style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem;">
-                    <span style="width: 20px; text-align: right;">3★</span>
-                    <div style="flex:1; height:8px; background: var(--color-border); border-radius: 4px; overflow:hidden;">
-                      <div style="width:2%; height:100%; background: var(--color-gold); border-radius:4px;"></div>
-                    </div>
-                    <span style="color: var(--color-muted);">2%</span>
-                  </div>
-                </div>
+              <div class="reviews-bars">
+                <div class="reviews-bar-row"><span style="width:24px;">5★</span><div class="reviews-bar-track"><div class="reviews-bar-fill" style="width:91%"></div></div><span>91%</span></div>
+                <div class="reviews-bar-row"><span style="width:24px;">4★</span><div class="reviews-bar-track"><div class="reviews-bar-fill" style="width:7%"></div></div><span>7%</span></div>
+                <div class="reviews-bar-row"><span style="width:24px;">3★</span><div class="reviews-bar-track"><div class="reviews-bar-fill" style="width:2%"></div></div><span>2%</span></div>
               </div>
             </div>
-
-            <div class="grid-2" style="gap: 20px;">
-              <div class="testimonial">
-                <div class="testimonial__stars">★★★★★</div>
-                <p class="testimonial__text">"NurSon a transformé notre matinée. Mes enfants se réveillent maintenant au son du Coran — c'est une bénédiction. La qualité audio est vraiment exceptionnelle, chaque récitation est cristalline."</p>
-                <div class="testimonial__author">
-                  <div class="testimonial__avatar">F</div>
-                  <div>
-                    <div class="testimonial__name">Fatima M. — Paris</div>
-                    <div class="testimonial__location">Achat vérifié · il y a 2 semaines</div>
-                  </div>
+            <div class="reviews-grid">
+              <div class="testi-card">
+                <div class="testi-card__stars">★★★★★</div>
+                <div class="testi-card__quote" aria-hidden="true">"</div>
+                <p class="testi-card__text">"La qualité audio est vraiment exceptionnelle. Chaque récitation est cristalline. Mes enfants se réveillent maintenant au son du Coran."</p>
+                <div class="testi-card__author">
+                  <div class="testi-card__avatar">F</div>
+                  <div><div class="testi-card__name">Fatima M. — Paris</div><div class="testi-card__loc">Achat vérifié · il y a 2 semaines</div></div>
                 </div>
               </div>
-              <div class="testimonial">
-                <div class="testimonial__stars">★★★★★</div>
-                <p class="testimonial__text">"Cadeau parfait pour mon mari. Il n'en revient pas de la qualité. Le son est puissant, clair. Le design s'intègre parfaitement au salon. Livraison très rapide et emballage soigné."</p>
-                <div class="testimonial__author">
-                  <div class="testimonial__avatar">S</div>
-                  <div>
-                    <div class="testimonial__name">Sara K. — Bordeaux</div>
-                    <div class="testimonial__location">Achat vérifié · il y a 1 mois</div>
-                  </div>
+              <div class="testi-card">
+                <div class="testi-card__stars">★★★★★</div>
+                <div class="testi-card__quote" aria-hidden="true">"</div>
+                <p class="testi-card__text">"Design magnifique, s'intègre parfaitement dans notre intérieur. Livraison très rapide et emballage soigné. Je recommande vivement."</p>
+                <div class="testi-card__author">
+                  <div class="testi-card__avatar">S</div>
+                  <div><div class="testi-card__name">Sara K. — Bordeaux</div><div class="testi-card__loc">Achat vérifié · il y a 1 mois</div></div>
                 </div>
               </div>
-              <div class="testimonial">
-                <div class="testimonial__stars">★★★★★</div>
-                <p class="testimonial__text">"J'utilise NurSon chaque matin pour mes douas du réveil. La sélection de récitateurs est fantastique. J'ai choisi Sheikh Al-Ghamdi et c'est une beauté à chaque écoute. Barakallahu fikoum."</p>
-                <div class="testimonial__author">
-                  <div class="testimonial__avatar">A</div>
-                  <div>
-                    <div class="testimonial__name">Abdel R. — Toulouse</div>
-                    <div class="testimonial__location">Achat vérifié · il y a 3 semaines</div>
-                  </div>
+              <div class="testi-card">
+                <div class="testi-card__stars">★★★★★</div>
+                <div class="testi-card__quote" aria-hidden="true">"</div>
+                <p class="testi-card__text">"Sheikh Al-Ghamdi, c'est une beauté à chaque écoute. J'utilise NurSon chaque matin pour mes douas. Barakallahu fikoum."</p>
+                <div class="testi-card__author">
+                  <div class="testi-card__avatar">A</div>
+                  <div><div class="testi-card__name">Abdel R. — Toulouse</div><div class="testi-card__loc">Achat vérifié · il y a 3 semaines</div></div>
                 </div>
               </div>
-              <div class="testimonial">
-                <div class="testimonial__stars">★★★★★</div>
-                <p class="testimonial__text">"Le mode nuit est parfait pour endormir mes petits au son du Coran. La minuterie se coupe automatiquement. Un produit pensé avec soin, on sent vraiment l'amour mis dedans. Très recommandé."</p>
-                <div class="testimonial__author">
-                  <div class="testimonial__avatar">N</div>
-                  <div>
-                    <div class="testimonial__name">Nadia T. — Lille</div>
-                    <div class="testimonial__location">Achat vérifié · il y a 1 mois</div>
-                  </div>
+              <div class="testi-card">
+                <div class="testi-card__stars">★★★★★</div>
+                <div class="testi-card__quote" aria-hidden="true">"</div>
+                <p class="testi-card__text">"Le mode nuit est parfait. La minuterie se coupe automatiquement. Un produit pensé avec soin et amour. Très recommandé."</p>
+                <div class="testi-card__author">
+                  <div class="testi-card__avatar">N</div>
+                  <div><div class="testi-card__name">Nadia T. — Lille</div><div class="testi-card__loc">Achat vérifié · il y a 1 mois</div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
 
-    <!-- CTA Bottom -->
-    <section class="section section--cream">
-      <div class="container">
-        <div class="cta-banner">
-          <h2>Prêt à illuminer votre foyer ?</h2>
-          <p>NurSon Classic — 79,90€ · Livraison sous 48h · Retour gratuit 30 jours</p>
-          <div class="btn-group">
+    <!-- CTA bottom -->
+    <section class="cta-section" aria-labelledby="prod-cta-title">
+      <div class="cta-section__inner">
+        <h2 class="t-headline cta-section__title reveal-fade" id="prod-cta-title">
+          Prêt à illuminer<br/><em style="color:var(--gold);">votre foyer ?</em>
+        </h2>
+        <p class="cta-section__sub reveal-fade delay-1">NurSon Classic — 79,90€ · Livraison sous 48h · Retour gratuit 30 jours</p>
+        <div class="cta-section__actions reveal-fade delay-2">
+          <div class="mag-btn">
             <button class="btn btn-gold btn-lg" onclick="redirectToStripe('price_nurson_classic')">
-              Acheter maintenant — 79,90 €
+              Commander maintenant — 79,90 €
             </button>
           </div>
         </div>
@@ -515,67 +380,33 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="index.html" class="logo">
-            <div class="logo__icon">☽</div>
-            Nur<span>Son</span>
+        <div>
+          <a href="index.html" class="nav__logo footer__logo" style="display:inline-flex; margin-bottom:16px;">
+            <div class="nav__logo-mark">☽</div>Nur<em>Son</em>
           </a>
-          <p class="footer__brand-desc">
-            NurSon est une marque française engagée à proposer des produits islamiques premium pour nourrir la foi au quotidien.
-          </p>
+          <p class="footer__desc">Marque française de produits islamiques premium.</p>
           <div class="footer__social">
             <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
             <a href="#" class="footer__social-link" aria-label="TikTok">📱</a>
             <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
           </div>
-          <div class="footer__payment mt-16">
-            <span class="payment-icon">VISA</span>
-            <span class="payment-icon">MC</span>
-            <span class="payment-icon">STRIPE</span>
-            <span class="payment-icon">PAYPAL</span>
-          </div>
         </div>
-        <div>
-          <h3 class="footer__col-title">Boutique</h3>
-          <ul class="footer__links">
-            <li><a href="produit.html" class="footer__link">NurSon Classic</a></li>
-            <li><a href="produit.html#features" class="footer__link">Caractéristiques</a></li>
-            <li><a href="produit.html#reviews" class="footer__link">Avis clients</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer__col-title">Informations</h3>
-          <ul class="footer__links">
-            <li><a href="a-propos.html" class="footer__link">À Propos</a></li>
-            <li><a href="contact.html" class="footer__link">Contact</a></li>
-            <li><a href="contact.html#faq" class="footer__link">FAQ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer__col-title">Légal</h3>
-          <ul class="footer__links">
-            <li><a href="cgv.html" class="footer__link">CGV</a></li>
-            <li><a href="mentions-legales.html" class="footer__link">Mentions légales</a></li>
-            <li><a href="mentions-legales.html#confidentialite" class="footer__link">Confidentialité</a></li>
-          </ul>
-        </div>
+        <div><div class="footer__col-title">Boutique</div><ul class="footer__links"><li><a href="produit.html" class="footer__link">NurSon Classic</a></li><li><a href="produit.html#features" class="footer__link">Caractéristiques</a></li></ul></div>
+        <div><div class="footer__col-title">Marque</div><ul class="footer__links"><li><a href="a-propos.html" class="footer__link">À Propos</a></li><li><a href="contact.html" class="footer__link">Contact</a></li></ul></div>
+        <div><div class="footer__col-title">Légal</div><ul class="footer__links"><li><a href="cgv.html" class="footer__link">CGV</a></li><li><a href="mentions-legales.html" class="footer__link">Mentions légales</a></li></ul></div>
       </div>
-      <hr class="divider" />
+      <hr class="divider"/>
       <div class="footer__bottom">
-        <p>© 2024 NurSon. Tous droits réservés.</p>
-        <div class="footer__bottom-links">
-          <a href="cgv.html">CGV</a>
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="contact.html">Contact</a>
-        </div>
+        <span>© 2024 NurSon · Fait avec 🤍 en France</span>
+        <div class="footer__bottom-links"><a href="cgv.html">CGV</a><a href="mentions-legales.html">Mentions légales</a></div>
       </div>
     </div>
   </footer>
 
+  <div class="toast" role="alert" aria-live="polite"></div>
   <script src="js/main.js"></script>
 </body>
 </html>
