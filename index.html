@@ -42,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=11" />
+  <link rel="stylesheet" href="css/style.css?v=12" />
   <link rel="stylesheet" href="css/animations.css?v=6" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 </head>
@@ -70,7 +70,7 @@
        ANNOUNCEMENT BAR
        ============================================================ -->
   <div class="announcement-bar" role="banner">
-    <span>🌙 LIVRAISON OFFERTE DÈS 60€ · EXPÉDITION 24–48H</span>
+    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;color:white;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>LIVRAISON OFFERTE DÈS 60€ · EXPÉDITION 24–48H</span>
   </div>
 
   <!-- ============================================================
@@ -80,7 +80,7 @@
     <div class="container">
       <div class="nav__inner">
         <a href="index.html" class="nav__logo" aria-label="NurSon — Accueil">
-          <div class="nav__logo-mark">☽</div>
+          <svg class="nav__logo-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>
           <span style="color:#3B9EF5">Nur</span><span style="color:#FF6B9D">Son</span>
         </a>
         <div class="nav__links">
@@ -104,7 +104,7 @@
        ============================================================ -->
   <div class="mobile-nav__overlay" id="mobileOverlay"></div>
   <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
-    <button class="mobile-nav__close" id="mobileNavClose" aria-label="Fermer le menu">✕</button>
+    <button class="mobile-nav__close" id="mobileNavClose" aria-label="Fermer le menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     <a href="index.html" class="mobile-nav__link">Accueil</a>
     <a href="produit.html" class="mobile-nav__link">Produit</a>
     <a href="a-propos.html" class="mobile-nav__link">À Propos</a>
@@ -120,10 +120,22 @@
     <section class="hero" aria-labelledby="hero-title">
 
       <!-- Colorful decorative blobs -->
+      <div class="hero__dot-grid" aria-hidden="true"></div>
       <div class="hero__blobs" aria-hidden="true">
         <div class="hero__blob hero__blob--blue"></div>
         <div class="hero__blob hero__blob--yellow"></div>
         <div class="hero__blob hero__blob--pink"></div>
+        <div class="hero__blob hero__blob--green"></div>
+        <div class="hero__blob hero__blob--purple"></div>
+      </div>
+      <div class="hero__shapes" aria-hidden="true">
+        <div class="hero__shape hero__shape--dot-1"></div>
+        <div class="hero__shape hero__shape--dot-2"></div>
+        <div class="hero__shape hero__shape--dot-3"></div>
+        <div class="hero__shape hero__shape--dot-4"></div>
+        <div class="hero__shape hero__shape--ring-1"></div>
+        <div class="hero__shape hero__shape--ring-2"></div>
+        <div class="hero__shape hero__shape--ring-3"></div>
       </div>
 
       <div class="container">
@@ -167,13 +179,23 @@
           <!-- Right: product visual -->
           <div class="hero__visual reveal-fade" style="transition-delay:0.2s">
             <div class="hero__card">
-              <div class="hero__card-icon">🔊</div>
+              <div class="hero__card-icon"><svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="spkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B9EF5"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="url(#spkGrad)"/>
+  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" stroke="url(#spkGrad)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" stroke="url(#spkGrad)" stroke-width="2" stroke-linecap="round"/>
+</svg></div>
               <div class="hero__card-arabic" style="font-family:'Amiri',serif;font-size:2rem;color:#3B9EF5;margin-top:12px;">نُورٌ</div>
               <p style="font-size:0.72rem;color:rgba(26,26,46,0.3);margin-top:16px;text-align:center;">Photo produit</p>
             </div>
             <div class="hero__badge">
               <div style="display:flex;align-items:center;gap:10px;">
-                <div style="width:40px;height:40px;background:#FFF5CC;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">⭐</div>
+                <div style="width:40px;height:40px;background:#FFF5CC;border-radius:12px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="color:#F5A623;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
                 <div>
                   <div style="font-weight:800;font-size:1rem;color:#1A1A2E;">4,9 / 5</div>
                   <div style="font-size:0.75rem;color:rgba(26,26,46,0.5);">127 avis vérifiés</div>
@@ -230,17 +252,17 @@
 
         <div class="features__grid">
           <div class="feature-card feature-card--blue reveal-fade" style="transition-delay:0.1s">
-            <span class="feature-card__icon">🍼</span>
+            <span class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 2h4M9 7V5h6v2M7 7h10l1 3v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 14h8M8 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
             <h3 class="feature-card__title">Adapté aux bébés</h3>
             <p class="feature-card__text">Volume sécurisé, coins arrondis, matériaux non toxiques. Pensé pour les tout-petits dès la naissance.</p>
           </div>
           <div class="feature-card feature-card--pink reveal-fade" style="transition-delay:0.2s">
-            <span class="feature-card__icon">🎵</span>
+            <span class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2"/></svg></span>
             <h3 class="feature-card__title">Son cristallin</h3>
             <p class="feature-card__text">Haut-parleur haute-fidélité 5W. Chaque mot du Coran est reproduit avec une clarté absolue.</p>
           </div>
           <div class="feature-card feature-card--green reveal-fade" style="transition-delay:0.3s">
-            <span class="feature-card__icon">🌙</span>
+            <span class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg></span>
             <h3 class="feature-card__title">114 sourates</h3>
             <p class="feature-card__text">L'intégralité du Saint Coran par les plus grands récitateurs. Plus de 50h de contenu islamique.</p>
           </div>
@@ -265,7 +287,17 @@
           <!-- Left: product visual in green card -->
           <div class="reveal-fade">
             <div class="showcase__img-frame">
-              <span class="showcase__img-frame-emoji">🔊</span>
+              <span class="showcase__img-frame-emoji"><svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="spkGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B9EF5"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="url(#spkGrad2)"/>
+  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" stroke="url(#spkGrad2)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" stroke="url(#spkGrad2)" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
               <!-- Price badge -->
               <div class="showcase__badge-price">
                 <div class="showcase__badge-price-main">79,90€</div>
@@ -292,28 +324,28 @@
 
             <div class="showcase__pills">
               <div class="showcase__pill">
-                <div class="showcase__pill-icon showcase__pill-icon--blue">🔉</div>
+                <div class="showcase__pill-icon showcase__pill-icon--blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" opacity="0.9"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
                 <div>
                   <div class="showcase__pill-title">Son Haute-Fidélité 5W</div>
                   <div class="showcase__pill-text">Reproduction fidèle de chaque récitation</div>
                 </div>
               </div>
               <div class="showcase__pill">
-                <div class="showcase__pill-icon showcase__pill-icon--green">🔋</div>
+                <div class="showcase__pill-icon showcase__pill-icon--green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="7" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/><path d="M18 11v2h4v-2h-4z" fill="currentColor"/><path d="M6 10v4M9 10v4M12 10v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
                 <div>
                   <div class="showcase__pill-title">+50h d'autonomie</div>
                   <div class="showcase__pill-text">Batterie longue durée rechargeable USB-C</div>
                 </div>
               </div>
               <div class="showcase__pill">
-                <div class="showcase__pill-icon showcase__pill-icon--yellow">📖</div>
+                <div class="showcase__pill-icon showcase__pill-icon--yellow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                 <div>
                   <div class="showcase__pill-title">114 Sourates complètes</div>
                   <div class="showcase__pill-text">Par Sheikh Al-Ghamdi, Mishary Rashid et plus</div>
                 </div>
               </div>
               <div class="showcase__pill">
-                <div class="showcase__pill-icon showcase__pill-icon--pink">🛡️</div>
+                <div class="showcase__pill-icon showcase__pill-icon--pink"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                 <div>
                   <div class="showcase__pill-title">Certifié sécurité enfants</div>
                   <div class="showcase__pill-text">Matériaux ABS non toxiques, sans arêtes vives</div>
@@ -353,25 +385,25 @@
         <div class="why__grid">
           <div class="why-card reveal-fade" style="transition-delay:0.05s">
             <div class="why-card__num why-card__num--blue">01</div>
-            <span class="why-card__icon">🍼</span>
+            <span class="why-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 2h4M9 7V5h6v2M7 7h10l1 3v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 14h8M8 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
             <h3 class="why-card__title">Sécurité bébé</h3>
             <p class="why-card__text">Certifié CE, matériaux ABS non toxiques, volume limité pour protéger les petites oreilles. Pensé dès la naissance.</p>
           </div>
           <div class="why-card reveal-fade" style="transition-delay:0.1s">
             <div class="why-card__num why-card__num--green">02</div>
-            <span class="why-card__icon">🎵</span>
+            <span class="why-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2"/></svg></span>
             <h3 class="why-card__title">Qualité premium</h3>
             <p class="why-card__text">Haut-parleur haute-fidélité, finitions soignées, design intemporel. Un objet que vous garderez longtemps.</p>
           </div>
           <div class="why-card reveal-fade" style="transition-delay:0.15s">
             <div class="why-card__num why-card__num--orange">03</div>
-            <span class="why-card__icon">💚</span>
+            <span class="why-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="color:#27AE60;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
             <h3 class="why-card__title">Fait avec foi</h3>
             <p class="why-card__text">Conçu par des musulmans, pour des musulmans. Chaque détail reflète notre attachement à l'islam.</p>
           </div>
           <div class="why-card reveal-fade" style="transition-delay:0.2s">
             <div class="why-card__num why-card__num--pink">04</div>
-            <span class="why-card__icon">🚀</span>
+            <span class="why-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <h3 class="why-card__title">Expédition rapide</h3>
             <p class="why-card__text">Traitement en 24h, livraison express disponible. Retour gratuit sous 30 jours — sans conditions.</p>
           </div>
@@ -523,14 +555,14 @@
       <div class="container">
         <div class="verse-divider">
           <div class="verse-divider__line"></div>
-          <span class="verse-divider__star">✦</span>
+          <span class="verse-divider__star"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l2.4 7.6H22l-6.4 4.6 2.4 7.8L12 17.4l-6 4.6 2.4-7.8L2 9.6h7.6z"/></svg></span>
           <div class="verse-divider__line"></div>
         </div>
         <p class="t-arabic reveal-fade">وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا</p>
         <p class="verse-section__ref reveal-fade" style="transition-delay:0.2s">Sourate Al-Muzzammil · 73:4</p>
         <div class="verse-divider" style="margin-top:24px;margin-bottom:0;">
           <div class="verse-divider__line"></div>
-          <span class="verse-divider__star">✦</span>
+          <span class="verse-divider__star"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l2.4 7.6H22l-6.4 4.6 2.4 7.8L12 17.4l-6 4.6 2.4-7.8L2 9.6h7.6z"/></svg></span>
           <div class="verse-divider__line"></div>
         </div>
       </div>
@@ -564,14 +596,14 @@
 
         <div class="footer__brand">
           <div class="footer__logo">
-            <span class="footer__logo-mark">☽</span>
+            <svg class="footer__logo-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>
             <span style="color:#89C4F4">Nur</span><span style="color:#FF8EC4">Son</span>
           </div>
           <p class="footer__tagline">L'enceinte coranique premium pour les bébés et les enfants musulmans.</p>
           <div class="footer__social">
-            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
-            <a href="#" class="footer__social-link" aria-label="TikTok">📱</a>
-            <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="footer__social-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.37 6.37 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           </div>
         </div>
 
@@ -592,7 +624,7 @@
       </div>
       <div class="footer__bottom">
         <p style="color:rgba(255,255,255,0.3);font-size:0.82rem;">© 2025 NurSon — Tous droits réservés</p>
-        <p style="color:rgba(255,255,255,0.2);font-size:0.78rem;margin-top:4px;">Conçu avec ❤️ pour les familles musulmanes</p>
+        <p style="color:rgba(255,255,255,0.2);font-size:0.78rem;margin-top:4px;">Conçu avec <svg width="12" height="12" viewBox="0 0 24 24" fill="#FF6B9D" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:inline-block;vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> pour les familles musulmanes</p>
       </div>
     </div>
   </footer>

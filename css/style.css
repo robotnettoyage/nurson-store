@@ -51,6 +51,7 @@ button {
   --blue-a: #3B9EF5;
   --green-p: #D5F5E3;
   --green-a: #27AE60;
+  --purple-a: #8B5CF6;
   --yellow-p: #FFF5CC;
   --yellow-a: #F5A623;
   --pink-p: #FFD6E8;
@@ -507,40 +508,158 @@ button {
   z-index: 0;
 }
 
+/* Hero: 5 overlapping blobs with more richness */
 .hero__blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(70px);
-  animation: blobFloat 12s ease-in-out infinite;
+  filter: blur(80px);
+  animation: blobFloat 14s ease-in-out infinite;
 }
 
 .hero__blob--blue {
-  width: 500px;
-  height: 500px;
-  background: #DCF0FF;
-  top: -100px;
-  right: -100px;
-  opacity: 0.7;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #B8DFFF 0%, #DCF0FF 60%, transparent 100%);
+  top: -150px;
+  right: -80px;
+  opacity: 0.85;
 }
 
 .hero__blob--yellow {
-  width: 400px;
-  height: 400px;
-  background: #FFF5CC;
-  bottom: -80px;
-  left: -80px;
-  opacity: 0.6;
-  animation-delay: -4s;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #FFE599 0%, #FFF5CC 60%, transparent 100%);
+  bottom: -100px;
+  left: -60px;
+  opacity: 0.75;
+  animation-delay: -5s;
 }
 
 .hero__blob--pink {
-  width: 350px;
-  height: 350px;
-  background: #FFD6E8;
-  top: 100px;
-  left: -60px;
-  opacity: 0.5;
-  animation-delay: -8s;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #FFADD1 0%, #FFD6E8 60%, transparent 100%);
+  top: 80px;
+  left: -40px;
+  opacity: 0.65;
+  animation-delay: -9s;
+}
+
+.hero__blob--green {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #A8E6C4 0%, #D5F5E3 60%, transparent 100%);
+  bottom: 20px;
+  right: 30%;
+  opacity: 0.55;
+  animation-delay: -3s;
+}
+
+.hero__blob--purple {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #C4B5FD 0%, #EDE9FE 60%, transparent 100%);
+  top: 40%;
+  right: 10%;
+  opacity: 0.45;
+  animation-delay: -7s;
+}
+
+/* Floating geometric shapes */
+.hero__shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero__shape {
+  position: absolute;
+  border-radius: 50%;
+  animation: shapeFloat 8s ease-in-out infinite;
+}
+
+.hero__shape--dot-1 {
+  width: 16px; height: 16px;
+  background: #3B9EF5;
+  opacity: 0.25;
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.hero__shape--dot-2 {
+  width: 10px; height: 10px;
+  background: #FF6B9D;
+  opacity: 0.3;
+  top: 65%;
+  left: 8%;
+  animation-delay: -2s;
+}
+
+.hero__shape--dot-3 {
+  width: 20px; height: 20px;
+  background: #F5A623;
+  opacity: 0.2;
+  top: 30%;
+  right: 12%;
+  animation-delay: -4s;
+}
+
+.hero__shape--dot-4 {
+  width: 12px; height: 12px;
+  background: #27AE60;
+  opacity: 0.25;
+  bottom: 25%;
+  right: 20%;
+  animation-delay: -6s;
+}
+
+.hero__shape--ring-1 {
+  width: 80px; height: 80px;
+  background: transparent;
+  border: 3px solid rgba(59,158,245,0.15);
+  border-radius: 50%;
+  top: 15%;
+  right: 25%;
+  animation-delay: -1s;
+}
+
+.hero__shape--ring-2 {
+  width: 50px; height: 50px;
+  background: transparent;
+  border: 2px solid rgba(255,107,157,0.15);
+  border-radius: 50%;
+  bottom: 30%;
+  left: 20%;
+  animation-delay: -3.5s;
+}
+
+.hero__shape--ring-3 {
+  width: 120px; height: 120px;
+  background: transparent;
+  border: 2px solid rgba(245,166,35,0.1);
+  border-radius: 50%;
+  top: 55%;
+  right: 5%;
+  animation-delay: -5.5s;
+}
+
+/* Subtle dot grid overlay */
+.hero__dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(59,158,245,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes shapeFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(5deg); }
+  66% { transform: translateY(8px) rotate(-3deg); }
 }
 
 .hero > .container {
@@ -1406,6 +1525,16 @@ button {
   .hero__blob--pink {
     width: 200px;
     height: 200px;
+  }
+
+  .hero__blob--green {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero__blob--purple {
+    width: 150px;
+    height: 150px;
   }
 
   /* Features */
