@@ -23,7 +23,7 @@
 .loader {
   position: fixed;
   inset: 0;
-  background: #FFFDF5;
+  background: #FFF9F0;
   z-index: 99999;
   display: flex;
   align-items: center;
@@ -31,6 +31,7 @@
   flex-direction: column;
   gap: 32px;
   transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  color: #2C1A06;
 }
 .loader.done {
   opacity: 0;
@@ -53,15 +54,15 @@
 }
 .loader__bar {
   width: 160px;
-  height: 3px;
+  height: 4px;
   background: rgba(44,26,6,0.1);
-  border-radius: 3px;
+  border-radius: 4px;
   overflow: hidden;
 }
 .loader__bar-fill {
   height: 100%;
   background: #C8A96E;
-  border-radius: 3px;
+  border-radius: 4px;
   width: 0%;
   animation: loaderFill 1.4s var(--ease-out) forwards;
 }
@@ -168,23 +169,23 @@
 .product-ring-2 { width: 140%; height: 140%; animation: ringPulse 4s ease-in-out infinite 1s; }
 .product-ring-3 { width: 160%; height: 160%; animation: ringPulse 4s ease-in-out infinite 2s; }
 
-/* ---- FAQ accordion ---- */
+/* ---- FAQ accordion (colors updated for v10) ---- */
 details[open] summary { color: var(--gold); }
 details summary {
   padding: 20px 0;
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--white);
+  color: #2C1A06;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border-dim);
+  border-bottom: 1px solid rgba(44,26,6,0.09);
   transition: color 0.3s;
 }
 details summary .chevron {
   width: 20px;
   height: 20px;
-  border: 1px solid var(--border-dim);
+  border: 1px solid rgba(44,26,6,0.09);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -192,14 +193,29 @@ details summary .chevron {
   font-size: 0.7rem;
   flex-shrink: 0;
   transition: transform 0.3s, border-color 0.3s;
-  color: var(--gold);
+  color: var(--gold-d, #A07840);
 }
 details[open] summary .chevron { transform: rotate(180deg); border-color: var(--gold); }
 details .faq-body {
   padding: 16px 0 20px;
   font-size: 0.875rem;
-  color: var(--white-60);
+  color: rgba(44,26,6,0.62);
   line-height: 1.75;
-  border-bottom: 1px solid var(--border-dim);
+  border-bottom: 1px solid rgba(44,26,6,0.09);
 }
-details .faq-body a { color: var(--gold); }
+details .faq-body a { color: var(--gold-d, #A07840); text-decoration: underline; }
+
+/* ============================================
+   Blob morph animation (v10)
+   ============================================ */
+@keyframes blobMorph {
+  0%, 100% { border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%; }
+  33%  { border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%; }
+  66%  { border-radius: 70% 30% 40% 60% / 40% 70% 30% 60%; }
+}
+
+/* ---- Georotate keyframes ---- */
+@keyframes geoRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
