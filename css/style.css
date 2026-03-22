@@ -1477,6 +1477,93 @@ button {
 }
 
 /* ============================================================
+   PRODUCT PAGE — TABS, QTY, OPTIONS
+   ============================================================ */
+
+/* ---- Product page ---- */
+.product-tabs { margin-top: 0; }
+.tabs-nav {
+  display: flex;
+  gap: 4px;
+  border-bottom: 2px solid rgba(26,26,46,0.08);
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 14px 24px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(26,26,46,0.45);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn.active, .tab-btn:hover { color: #3B9EF5; border-bottom-color: #3B9EF5; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.qty-wrap {
+  display: inline-flex;
+  align-items: center;
+  background: #F0F4FF;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.qty-btn {
+  width: 40px; height: 40px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #3B9EF5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.qty-btn:hover { background: rgba(59,158,245,0.1); }
+.qty-input {
+  width: 48px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1A1A2E;
+  -moz-appearance: textfield;
+}
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+.option-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.option-btn {
+  background: white;
+  border: 2px solid rgba(26,26,46,0.12);
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: rgba(26,26,46,0.6);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.option-btn.active, .option-btn:hover {
+  border-color: #3B9EF5;
+  color: #3B9EF5;
+  background: rgba(59,158,245,0.06);
+}
+
+/* Breadcrumb */
+.breadcrumb { display: flex; align-items: center; }
+
+/* ============================================================
    RESPONSIVE — TABLET
    ============================================================ */
 @media (max-width: 1024px) {

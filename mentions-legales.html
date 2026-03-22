@@ -18,125 +18,115 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=12" />
+  <link rel="stylesheet" href="css/style.css?v=14" />
   <link rel="stylesheet" href="css/animations.css?v=6" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 </head>
 <body>
 
-  <!-- Cursor -->
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
-
-  <!-- Scroll progress -->
   <div id="scroll-progress"></div>
 
-  <!-- Announcement Bar -->
-  <div class="announcement-bar">
-    <span style="transition: opacity 0.4s, transform 0.4s;">🌙 NurSon — Enceinte Coranique Premium</span>
+  <div class="announcement-bar" role="banner">
+    <span>LIVRAISON OFFERTE DÈS 60€ · EXPÉDITION 24–48H</span>
   </div>
 
-  <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Navigation principale">
     <div class="container">
       <div class="nav__inner">
-        <a href="index.html" class="nav__logo" aria-label="NurSon Accueil">
-          <div class="nav__logo-mark" aria-hidden="true">☽</div>
-          Nur<em>Son</em>
+        <a href="index.html" class="nav__logo" aria-label="NurSon — Accueil">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="nav__logo-mark" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>
+          <span style="color:#3B9EF5">Nur</span><span style="color:#FF6B9D">Son</span>
         </a>
-
         <div class="nav__links">
           <a href="index.html" class="nav__link">Accueil</a>
           <a href="produit.html" class="nav__link">Produit</a>
           <a href="a-propos.html" class="nav__link">À Propos</a>
           <a href="contact.html" class="nav__link">Contact</a>
         </div>
-
         <div class="nav__cta">
-          <a href="produit.html" class="btn btn-gold" style="padding: 12px 24px; font-size: 0.75rem;">Commander →</a>
-          <button class="nav__menu-btn" aria-label="Menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-          </button>
+          <a href="produit.html" class="btn btn-secondary" style="padding:10px 24px;font-size:0.8rem;">Commander →</a>
+          <button class="nav__menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Mobile Nav -->
-  <nav class="mobile-nav" aria-label="Menu mobile">
-    <button class="mobile-nav__close" aria-label="Fermer">✕</button>
+  <div class="mobile-nav__overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+    <button class="mobile-nav__close" id="mobileNavClose" aria-label="Fermer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+    </button>
     <a href="index.html" class="mobile-nav__link">Accueil</a>
     <a href="produit.html" class="mobile-nav__link">Produit</a>
     <a href="a-propos.html" class="mobile-nav__link">À Propos</a>
     <a href="contact.html" class="mobile-nav__link">Contact</a>
-    <a href="produit.html" class="btn btn-gold btn-full mt-32">Commander maintenant</a>
+    <a href="produit.html" class="btn btn-secondary btn-full mt-32">Commander maintenant</a>
   </nav>
 
   <main>
-
-    <!-- ======================== PAGE HERO ======================== -->
-    <section class="page-hero" aria-labelledby="legal-hero-title">
-      <div class="container">
-        <div class="page-hero__inner">
-          <span class="t-label">Transparence & légalité</span>
-          <h1 id="legal-hero-title" class="t-display" style="color: white;">
-            Mentions légales
-          </h1>
-          <p class="page-hero__sub">Dernière mise à jour : 1er janvier 2024</p>
-        </div>
+    <section style="background:#DCF0FF;padding:160px 0 60px;">
+      <div class="container" style="text-align:center;">
+        <span class="t-label">Légal</span>
+        <h1 style="font-family:'Nunito',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:900;color:#1A1A2E;margin:16px 0 12px;">Mentions légales</h1>
+        <p style="color:rgba(26,26,46,0.55);font-size:0.9rem;">Dernière mise à jour : janvier 2025</p>
       </div>
     </section>
-
-    <!-- ======================== LEGAL CONTENT ======================== -->
-    <section class="section">
+    <div class="wave-divider" aria-hidden="true" style="background:#DCF0FF;">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C480,80 960,0 1440,50 L1440,80 L0,80 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+    <section style="padding:60px 0 100px;background:white;">
       <div class="container">
-        <div class="legal-content">
+        <div style="max-width:760px;margin:0 auto;">
 
-          <nav class="breadcrumb" aria-label="Fil d'Ariane">
-            <a href="index.html">Accueil</a>
-            <span class="breadcrumb__sep" aria-hidden="true">/</span>
-            <span aria-current="page">Mentions légales</span>
+          <nav class="breadcrumb" aria-label="Fil d'Ariane" style="margin-bottom:40px;">
+            <a href="index.html" style="color:rgba(26,26,46,0.5);font-size:0.85rem;">Accueil</a>
+            <span style="color:rgba(26,26,46,0.3);margin:0 8px;font-size:0.85rem;">/</span>
+            <span style="color:#3B9EF5;font-size:0.85rem;font-weight:600;" aria-current="page">Mentions légales</span>
           </nav>
 
-          <h2>1. Éditeur du site</h2>
-          <p>Le site <strong>nurson.fr</strong> est édité par :</p>
-          <ul>
-            <li><strong>Raison sociale :</strong> NurSon SAS (à compléter avec votre forme juridique)</li>
-            <li><strong>Capital social :</strong> [À compléter]</li>
-            <li><strong>Adresse du siège social :</strong> [Votre adresse complète], France</li>
-            <li><strong>Numéro SIRET :</strong> [À compléter]</li>
-            <li><strong>Numéro TVA intracommunautaire :</strong> [À compléter]</li>
-            <li><strong>Email :</strong> <a href="mailto:contact@nurson.fr">contact@nurson.fr</a></li>
-            <li><strong>Téléphone :</strong> [Votre numéro]</li>
+          <h2 style="font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;color:#1A1A2E;margin:32px 0 12px;">1. Éditeur du site</h2>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;margin-bottom:12px;">Le site <strong style="color:#1A1A2E;">nurson.fr</strong> est édité par :</p>
+          <ul style="color:rgba(26,26,46,0.7);line-height:1.8;padding-left:20px;list-style:disc;">
+            <li><strong style="color:#1A1A2E;">Raison sociale :</strong> NurSon SAS (à compléter avec votre forme juridique)</li>
+            <li><strong style="color:#1A1A2E;">Capital social :</strong> [À compléter]</li>
+            <li><strong style="color:#1A1A2E;">Adresse du siège social :</strong> [Votre adresse complète], France</li>
+            <li><strong style="color:#1A1A2E;">Numéro SIRET :</strong> [À compléter]</li>
+            <li><strong style="color:#1A1A2E;">Numéro TVA intracommunautaire :</strong> [À compléter]</li>
+            <li><strong style="color:#1A1A2E;">Email :</strong> <a href="mailto:contact@nurson.fr" style="color:#3B9EF5;">contact@nurson.fr</a></li>
+            <li><strong style="color:#1A1A2E;">Téléphone :</strong> [Votre numéro]</li>
           </ul>
 
-          <h2>2. Directeur de la publication</h2>
-          <p>[Nom du directeur de publication], en qualité de [fonction].</p>
+          <h2 style="font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;color:#1A1A2E;margin:32px 0 12px;">2. Directeur de la publication</h2>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;">[Nom du directeur de publication], en qualité de [fonction].</p>
 
-          <h2>3. Hébergement</h2>
-          <p>Ce site est hébergé par :</p>
-          <ul>
-            <li><strong>Cloudflare, Inc.</strong></li>
+          <h2 style="font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;color:#1A1A2E;margin:32px 0 12px;">3. Hébergement</h2>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;margin-bottom:8px;">Ce site est hébergé par :</p>
+          <ul style="color:rgba(26,26,46,0.7);line-height:1.8;padding-left:20px;list-style:disc;">
+            <li><strong style="color:#1A1A2E;">Cloudflare, Inc.</strong></li>
             <li>101 Townsend St, San Francisco, CA 94107, États-Unis</li>
-            <li>Site : <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">www.cloudflare.com</a></li>
+            <li>Site : <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer" style="color:#3B9EF5;">www.cloudflare.com</a></li>
           </ul>
 
-          <h2>4. Propriété intellectuelle</h2>
-          <p>L'ensemble du contenu de ce site (textes, images, vidéos, logos, icônes, son, etc.) est la propriété exclusive de NurSon ou de ses partenaires. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable de NurSon.</p>
-          <p>Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+          <h2 style="font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;color:#1A1A2E;margin:32px 0 12px;">4. Propriété intellectuelle</h2>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;margin-bottom:12px;">L'ensemble du contenu de ce site (textes, images, vidéos, logos, icônes, son, etc.) est la propriété exclusive de NurSon ou de ses partenaires. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable de NurSon.</p>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;">Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
 
-          <h2 id="confidentialite">5. Politique de confidentialité &amp; RGPD</h2>
+          <h2 id="confidentialite" style="font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;color:#1A1A2E;margin:32px 0 12px;">5. Politique de confidentialité &amp; RGPD</h2>
 
-          <h3>5.1 Données collectées</h3>
-          <p>NurSon collecte les données suivantes :</p>
-          <ul>
-            <li><strong>Données de commande :</strong> nom, prénom, adresse de livraison/facturation, email, téléphone — nécessaires au traitement de vos commandes.</li>
-            <li><strong>Données de contact :</strong> nom, email, message — collectées via notre formulaire de contact.</li>
-            <li><strong>Données de navigation :</strong> adresse IP, pages visitées, durée de visite — collectées via des outils d'analyse anonymisés.</li>
+          <h3 style="font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;color:#3B9EF5;margin:20px 0 10px;">5.1 Données collectées</h3>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;margin-bottom:8px;">NurSon collecte les données suivantes :</p>
+          <ul style="color:rgba(26,26,46,0.7);line-height:1.8;padding-left:20px;list-style:disc;">
+            <li><strong style="color:#1A1A2E;">Données de commande :</strong> nom, prénom, adresse de livraison/facturation, email, téléphone — nécessaires au traitement de vos commandes.</li>
+            <li><strong style="color:#1A1A2E;">Données de contact :</strong> nom, email, message — collectées via notre formulaire de contact.</li>
+            <li><strong style="color:#1A1A2E;">Données de navigation :</strong> adresse IP, pages visitées, durée de visite — collectées via des outils d'analyse anonymisés.</li>
           </ul>
 
-          <h3>5.2 Finalités et bases légales</h3>
-          <ul>
+          <h3 style="font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;color:#3B9EF5;margin:20px 0 10px;">5.2 Finalités et bases légales</h3>
+          <ul style="color:rgba(26,26,46,0.7);line-height:1.8;padding-left:20px;list-style:disc;">
             <li>Traitement des commandes (exécution contractuelle)</li>
             <li>Service client et gestion des retours (exécution contractuelle)</li>
             <li>Amélioration du site et analyse d'audience (intérêt légitime)</li>
@@ -144,25 +134,25 @@
             <li>Obligations légales et comptables (obligation légale)</li>
           </ul>
 
-          <h3>5.3 Conservation des données</h3>
-          <ul>
+          <h3 style="font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;color:#3B9EF5;margin:20px 0 10px;">5.3 Conservation des données</h3>
+          <ul style="color:rgba(26,26,46,0.7);line-height:1.8;padding-left:20px;list-style:disc;">
             <li>Données de commande : 5 ans (obligation comptable)</li>
             <li>Données de contact : 3 ans après le dernier contact</li>
             <li>Données de navigation : 13 mois maximum</li>
           </ul>
 
-          <h3>5.4 Partage des données</h3>
-          <p>Vos données peuvent être partagées avec :</p>
-          <ul>
-            <li><strong>Stripe</strong> (paiement sécurisé) — politique de confidentialité disponible sur stripe.com</li>
-            <li><strong>Transporteurs</strong> (livraison) — uniquement les données nécessaires à la livraison</li>
-            <li><strong>Prestataires techniques</strong> (hébergement, email) — sous contrats de confidentialité</li>
+          <h3 style="font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;color:#3B9EF5;margin:20px 0 10px;">5.4 Partage des données</h3>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;margin-bottom:8px;">Vos données peuvent être partagées avec :</p>
+          <ul style="color:rgba(26,26,46,0.7);line-height:1.8;padding-left:20px;list-style:disc;">
+            <li><strong style="color:#1A1A2E;">Stripe</strong> (paiement sécurisé) — politique de confidentialité disponible sur stripe.com</li>
+            <li><strong style="color:#1A1A2E;">Transporteurs</strong> (livraison) — uniquement les données nécessaires à la livraison</li>
+            <li><strong style="color:#1A1A2E;">Prestataires techniques</strong> (hébergement, email) — sous contrats de confidentialité</li>
           </ul>
-          <p>Nous ne vendons jamais vos données personnelles à des tiers.</p>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;margin-top:12px;">Nous ne vendons jamais vos données personnelles à des tiers.</p>
 
-          <h3>5.5 Vos droits</h3>
-          <p>Conformément au RGPD, vous disposez des droits suivants :</p>
-          <ul>
+          <h3 style="font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;color:#3B9EF5;margin:20px 0 10px;">5.5 Vos droits</h3>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;margin-bottom:8px;">Conformément au RGPD, vous disposez des droits suivants :</p>
+          <ul style="color:rgba(26,26,46,0.7);line-height:1.8;padding-left:20px;list-style:disc;">
             <li>Droit d'accès à vos données</li>
             <li>Droit de rectification</li>
             <li>Droit à l'effacement (« droit à l'oubli »)</li>
@@ -170,104 +160,76 @@
             <li>Droit à la portabilité</li>
             <li>Droit d'opposition</li>
           </ul>
-          <p>Pour exercer ces droits, contactez-nous à : <a href="mailto:privacy@nurson.fr">privacy@nurson.fr</a>. Vous pouvez également déposer une plainte auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">cnil.fr</a>).</p>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;margin-top:12px;">Pour exercer ces droits, contactez-nous à : <a href="mailto:privacy@nurson.fr" style="color:#3B9EF5;">privacy@nurson.fr</a>. Vous pouvez également déposer une plainte auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" style="color:#3B9EF5;">cnil.fr</a>).</p>
 
-          <h2 id="cookies">6. Politique de cookies</h2>
+          <h2 id="cookies" style="font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;color:#1A1A2E;margin:32px 0 12px;">6. Politique de cookies</h2>
 
-          <h3>6.1 Qu'est-ce qu'un cookie ?</h3>
-          <p>Un cookie est un petit fichier texte déposé sur votre terminal lors de la visite d'un site web. Il permet au site de mémoriser des informations sur votre visite.</p>
+          <h3 style="font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;color:#3B9EF5;margin:20px 0 10px;">6.1 Qu'est-ce qu'un cookie ?</h3>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;">Un cookie est un petit fichier texte déposé sur votre terminal lors de la visite d'un site web. Il permet au site de mémoriser des informations sur votre visite.</p>
 
-          <h3>6.2 Cookies utilisés</h3>
-          <ul>
-            <li><strong>Cookies strictement nécessaires :</strong> fonctionnement du panier, session utilisateur — ne nécessitent pas de consentement.</li>
-            <li><strong>Cookies analytiques :</strong> mesure d'audience anonymisée — nécessitent votre consentement.</li>
-            <li><strong>Cookies Stripe :</strong> sécurisation des paiements — nécessaires à la transaction.</li>
+          <h3 style="font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;color:#3B9EF5;margin:20px 0 10px;">6.2 Cookies utilisés</h3>
+          <ul style="color:rgba(26,26,46,0.7);line-height:1.8;padding-left:20px;list-style:disc;">
+            <li><strong style="color:#1A1A2E;">Cookies strictement nécessaires :</strong> fonctionnement du panier, session utilisateur — ne nécessitent pas de consentement.</li>
+            <li><strong style="color:#1A1A2E;">Cookies analytiques :</strong> mesure d'audience anonymisée — nécessitent votre consentement.</li>
+            <li><strong style="color:#1A1A2E;">Cookies Stripe :</strong> sécurisation des paiements — nécessaires à la transaction.</li>
           </ul>
 
-          <h3>6.3 Gestion des cookies</h3>
-          <p>Vous pouvez configurer votre navigateur pour refuser les cookies ou être alerté lors de leur dépôt. La désactivation de certains cookies peut affecter votre expérience de navigation.</p>
+          <h3 style="font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;color:#3B9EF5;margin:20px 0 10px;">6.3 Gestion des cookies</h3>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;">Vous pouvez configurer votre navigateur pour refuser les cookies ou être alerté lors de leur dépôt. La désactivation de certains cookies peut affecter votre expérience de navigation.</p>
 
-          <h2>7. Sécurité des paiements</h2>
-          <p>Toutes les transactions financières sont traitées par <strong>Stripe</strong>, certifié PCI DSS Level 1. NurSon ne stocke à aucun moment vos données bancaires sur ses serveurs. Toutes les communications sont chiffrées via SSL/TLS.</p>
+          <h2 style="font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;color:#1A1A2E;margin:32px 0 12px;">7. Sécurité des paiements</h2>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;">Toutes les transactions financières sont traitées par <strong style="color:#1A1A2E;">Stripe</strong>, certifié PCI DSS Level 1. NurSon ne stocke à aucun moment vos données bancaires sur ses serveurs. Toutes les communications sont chiffrées via SSL/TLS.</p>
 
-          <h2>8. Droit applicable &amp; juridiction</h2>
-          <p>Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents. Avant tout recours judiciaire, nous vous encourageons à nous contacter pour trouver une solution amiable.</p>
+          <h2 style="font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;color:#1A1A2E;margin:32px 0 12px;">8. Droit applicable &amp; juridiction</h2>
+          <p style="color:rgba(26,26,46,0.7);line-height:1.8;">Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents. Avant tout recours judiciaire, nous vous encourageons à nous contacter pour trouver une solution amiable.</p>
 
-          <!-- Note box -->
-          <div style="margin-top: 48px; padding: 24px 28px; background: rgba(200, 169, 110, 0.05); border-radius: 8px; border-left: 4px solid var(--gold);">
-            <p style="font-size: 0.875rem; color: var(--muted); margin: 0; line-height: 1.7;">
-              <strong style="color: var(--gold);">Note :</strong> Ces mentions légales constituent un modèle. Vous devez les compléter avec vos informations réelles (SIRET, adresse, directeur de publication, etc.) et les faire valider par un professionnel du droit avant toute mise en ligne officielle.
+          <div style="margin-top:48px;padding:24px 28px;background:#DCF0FF;border-radius:16px;border-left:4px solid #3B9EF5;">
+            <p style="font-size:0.875rem;color:rgba(26,26,46,0.65);margin:0;line-height:1.7;">
+              <strong style="color:#3B9EF5;">Note :</strong> Ces mentions légales constituent un modèle. Vous devez les compléter avec vos informations réelles (SIRET, adresse, directeur de publication, etc.) et les faire valider par un professionnel du droit avant toute mise en ligne officielle.
             </p>
           </div>
 
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div>
-          <a href="index.html" class="nav__logo footer__logo" style="margin-bottom:16px; display:inline-flex;">
-            <div class="nav__logo-mark">☽</div>
-            Nur<em>Son</em>
-          </a>
-          <p class="footer__desc">Marque française de produits islamiques premium. Pensée par des musulmans, pour des musulmans.</p>
-          <div class="footer__social" aria-label="Réseaux sociaux">
-            <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
-            <a href="#" class="footer__social-link" aria-label="TikTok">📱</a>
-            <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="color:#89C4F4;margin-right:6px;" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>
+            <span style="color:#89C4F4">Nur</span><span style="color:#FF8EC4">Son</span>
           </div>
-          <div class="footer__pay" style="margin-top:20px;" aria-label="Paiements acceptés">
-            <span class="pay-chip">VISA</span>
-            <span class="pay-chip">MC</span>
-            <span class="pay-chip">STRIPE</span>
-            <span class="pay-chip">PAYPAL</span>
+          <p class="footer__tagline">L'enceinte coranique premium pour les bébés et les enfants musulmans.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.37 6.37 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           </div>
         </div>
-        <div>
-          <div class="footer__col-title">Boutique</div>
-          <ul class="footer__links">
-            <li><a href="produit.html" class="footer__link">NurSon Classic</a></li>
-            <li><a href="produit.html#features" class="footer__link">Caractéristiques</a></li>
-            <li><a href="produit.html#tab-reviews" class="footer__link">Avis clients</a></li>
-          </ul>
+        <div class="footer__col">
+          <div class="footer__col-title">Navigation</div>
+          <a href="index.html" class="footer__link">Accueil</a>
+          <a href="produit.html" class="footer__link">Produit</a>
+          <a href="a-propos.html" class="footer__link">À Propos</a>
+          <a href="contact.html" class="footer__link">Contact</a>
         </div>
-        <div>
-          <div class="footer__col-title">Marque</div>
-          <ul class="footer__links">
-            <li><a href="a-propos.html" class="footer__link">Notre histoire</a></li>
-            <li><a href="a-propos.html#mission" class="footer__link">Mission & valeurs</a></li>
-            <li><a href="contact.html" class="footer__link">Contact</a></li>
-            <li><a href="contact.html#faq" class="footer__link">FAQ</a></li>
-          </ul>
-        </div>
-        <div>
+        <div class="footer__col">
           <div class="footer__col-title">Légal</div>
-          <ul class="footer__links">
-            <li><a href="cgv.html" class="footer__link">CGV</a></li>
-            <li><a href="mentions-legales.html" class="footer__link">Mentions légales</a></li>
-            <li><a href="mentions-legales.html#confidentialite" class="footer__link">Confidentialité</a></li>
-            <li><a href="mentions-legales.html#cookies" class="footer__link">Cookies</a></li>
-          </ul>
+          <a href="cgv.html" class="footer__link">CGV</a>
+          <a href="mentions-legales.html" class="footer__link">Mentions légales</a>
         </div>
       </div>
-      <hr class="divider" />
       <div class="footer__bottom">
-        <span>© 2024 NurSon · Fait avec 🤍 en France</span>
-        <div class="footer__bottom-links">
-          <a href="cgv.html">CGV</a>
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="contact.html">Contact</a>
-        </div>
+        <p style="color:rgba(255,255,255,0.3);font-size:0.82rem;">© 2025 NurSon — Tous droits réservés</p>
+        <p style="color:rgba(255,255,255,0.2);font-size:0.78rem;margin-top:4px;">Conçu avec <svg width="12" height="12" viewBox="0 0 24 24" fill="#FF6B9D" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> pour les familles musulmanes</p>
       </div>
     </div>
   </footer>
 
   <div class="toast" role="alert" aria-live="polite"></div>
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
