@@ -42,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=12" />
+  <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/animations.css?v=6" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 </head>
@@ -129,13 +129,75 @@
         <div class="hero__blob hero__blob--purple"></div>
       </div>
       <div class="hero__shapes" aria-hidden="true">
-        <div class="hero__shape hero__shape--dot-1"></div>
-        <div class="hero__shape hero__shape--dot-2"></div>
-        <div class="hero__shape hero__shape--dot-3"></div>
-        <div class="hero__shape hero__shape--dot-4"></div>
-        <div class="hero__shape hero__shape--ring-1"></div>
-        <div class="hero__shape hero__shape--ring-2"></div>
-        <div class="hero__shape hero__shape--ring-3"></div>
+
+        <!-- Croissant de lune — haut gauche -->
+        <div class="hero__shape hero__shape--moon">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 22C30 28.627 24.627 34 18 34C14.686 34 11.686 32.657 9.515 30.485C11.051 30.822 12.652 31 14.294 31C23.477 31 31 23.477 31 14.294C31 12.652 30.822 11.051 30.485 9.515C32.657 11.686 34 14.686 34 18C34 18 34 22 30 22Z" fill="#FF6B9D" opacity="0.7"/>
+          </svg>
+        </div>
+
+        <!-- Étoile 4 branches — haut droite -->
+        <div class="hero__shape hero__shape--star4">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2 L20.5 15.5 L34 18 L20.5 20.5 L18 34 L15.5 20.5 L2 18 L15.5 15.5 Z" fill="#F5A623" opacity="0.75"/>
+          </svg>
+        </div>
+
+        <!-- Sparkle / astérisque — milieu gauche -->
+        <div class="hero__shape hero__shape--sparkle">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="16" y1="2" x2="16" y2="30" stroke="#3B9EF5" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="2" y1="16" x2="30" y2="16" stroke="#3B9EF5" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="5.5" y1="5.5" x2="26.5" y2="26.5" stroke="#3B9EF5" stroke-width="2" stroke-linecap="round"/>
+            <line x1="26.5" y1="5.5" x2="5.5" y2="26.5" stroke="#3B9EF5" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <!-- Triangle outline — bas droite -->
+        <div class="hero__shape hero__shape--triangle">
+          <svg width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 3 L39 35 L3 35 Z" stroke="#27AE60" stroke-width="2.5" stroke-linejoin="round" fill="rgba(39,174,96,0.08)"/>
+          </svg>
+        </div>
+
+        <!-- Losange — bas gauche -->
+        <div class="hero__shape hero__shape--diamond">
+          <svg width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 2 L28 20 L15 38 L2 20 Z" fill="#8B5CF6" opacity="0.55" stroke="#8B5CF6" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Croix arrondie — milieu droite -->
+        <div class="hero__shape hero__shape--plus">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 3 L14 25 M3 14 L25 14" stroke="#FF6B9D" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <!-- Anneau pointillé — haut centre-droite -->
+        <div class="hero__shape hero__shape--ring-dashed">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="36" stroke="#3B9EF5" stroke-width="2" stroke-dasharray="6 5" opacity="0.35"/>
+          </svg>
+        </div>
+
+        <!-- Étoile 6 branches / flocon — bas centre -->
+        <div class="hero__shape hero__shape--hex">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="19" y1="3" x2="19" y2="35" stroke="#F5A623" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="3" y1="19" x2="35" y2="19" stroke="#F5A623" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="7" y1="7" x2="31" y2="31" stroke="#F5A623" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="31" y1="7" x2="7" y2="31" stroke="#F5A623" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="19" cy="19" r="4" fill="#F5A623" opacity="0.5"/>
+          </svg>
+        </div>
+
+        <!-- Petit cercle plein — accent rose top -->
+        <div class="hero__shape hero__shape--dot-sm"></div>
+        <!-- Petit cercle plein — accent vert -->
+        <div class="hero__shape hero__shape--dot-sm2"></div>
+
       </div>
 
       <div class="container">

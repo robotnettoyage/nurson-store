@@ -565,7 +565,9 @@ button {
   animation-delay: -7s;
 }
 
-/* Floating geometric shapes */
+/* ============================================================
+   HERO — Floating graphic symbols
+   ============================================================ */
 .hero__shapes {
   position: absolute;
   inset: 0;
@@ -576,90 +578,114 @@ button {
 
 .hero__shape {
   position: absolute;
-  border-radius: 50%;
-  animation: shapeFloat 8s ease-in-out infinite;
+  animation: shapeFloat 9s ease-in-out infinite;
 }
 
-.hero__shape--dot-1 {
-  width: 16px; height: 16px;
-  background: #3B9EF5;
-  opacity: 0.25;
-  top: 20%;
-  left: 15%;
+/* Croissant — haut gauche */
+.hero__shape--moon {
+  top: 18%;
+  left: 6%;
   animation-delay: 0s;
+  animation-duration: 10s;
+  filter: drop-shadow(0 4px 12px rgba(255,107,157,0.3));
 }
 
-.hero__shape--dot-2 {
-  width: 10px; height: 10px;
-  background: #FF6B9D;
-  opacity: 0.3;
-  top: 65%;
-  left: 8%;
+/* Étoile 4 branches — haut droite */
+.hero__shape--star4 {
+  top: 8%;
+  right: 8%;
   animation-delay: -2s;
+  animation-duration: 8s;
+  filter: drop-shadow(0 4px 10px rgba(245,166,35,0.35));
 }
 
-.hero__shape--dot-3 {
-  width: 20px; height: 20px;
-  background: #F5A623;
-  opacity: 0.2;
-  top: 30%;
-  right: 12%;
+/* Sparkle astérisque — milieu gauche */
+.hero__shape--sparkle {
+  top: 52%;
+  left: 3%;
   animation-delay: -4s;
+  animation-duration: 11s;
+  filter: drop-shadow(0 2px 8px rgba(59,158,245,0.35));
 }
 
-.hero__shape--dot-4 {
-  width: 12px; height: 12px;
-  background: #27AE60;
-  opacity: 0.25;
-  bottom: 25%;
-  right: 20%;
+/* Triangle outline — bas droite */
+.hero__shape--triangle {
+  bottom: 12%;
+  right: 6%;
   animation-delay: -6s;
+  animation-duration: 9.5s;
+  filter: drop-shadow(0 4px 10px rgba(39,174,96,0.25));
 }
 
-.hero__shape--ring-1 {
-  width: 80px; height: 80px;
-  background: transparent;
-  border: 3px solid rgba(59,158,245,0.15);
+/* Losange violet — bas gauche */
+.hero__shape--diamond {
+  bottom: 18%;
+  left: 8%;
+  animation-delay: -1.5s;
+  animation-duration: 12s;
+  filter: drop-shadow(0 4px 14px rgba(139,92,246,0.35));
+}
+
+/* Croix rose — milieu droite */
+.hero__shape--plus {
+  top: 38%;
+  right: 4%;
+  animation-delay: -5s;
+  animation-duration: 7s;
+  filter: drop-shadow(0 2px 8px rgba(255,107,157,0.3));
+}
+
+/* Anneau pointillé bleu — haut centre */
+.hero__shape--ring-dashed {
+  top: 12%;
+  left: 40%;
+  animation-delay: -3s;
+  animation-duration: 14s;
+  opacity: 0.8;
+}
+
+/* Flocon 6 branches orange — bas centre */
+.hero__shape--hex {
+  bottom: 8%;
+  left: 35%;
+  animation-delay: -7s;
+  animation-duration: 10s;
+  filter: drop-shadow(0 2px 8px rgba(245,166,35,0.3));
+}
+
+/* Petits cercles accent */
+.hero__shape--dot-sm {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  top: 15%;
-  right: 25%;
-  animation-delay: -1s;
+  background: #FF6B9D;
+  opacity: 0.5;
+  top: 28%;
+  left: 28%;
+  animation-delay: -2.5s;
+  animation-duration: 7s;
+  box-shadow: 0 2px 8px rgba(255,107,157,0.5);
 }
 
-.hero__shape--ring-2 {
-  width: 50px; height: 50px;
-  background: transparent;
-  border: 2px solid rgba(255,107,157,0.15);
+.hero__shape--dot-sm2 {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  bottom: 30%;
-  left: 20%;
-  animation-delay: -3.5s;
-}
-
-.hero__shape--ring-3 {
-  width: 120px; height: 120px;
-  background: transparent;
-  border: 2px solid rgba(245,166,35,0.1);
-  border-radius: 50%;
-  top: 55%;
-  right: 5%;
-  animation-delay: -5.5s;
-}
-
-/* Subtle dot grid overlay */
-.hero__dot-grid {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(59,158,245,0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
+  background: #27AE60;
+  opacity: 0.45;
+  top: 68%;
+  right: 28%;
+  animation-delay: -8s;
+  animation-duration: 8s;
+  box-shadow: 0 2px 8px rgba(39,174,96,0.5);
 }
 
 @keyframes shapeFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  33% { transform: translateY(-12px) rotate(5deg); }
-  66% { transform: translateY(8px) rotate(-3deg); }
+  0%   { transform: translateY(0px)   rotate(0deg)  scale(1); }
+  25%  { transform: translateY(-14px) rotate(6deg)  scale(1.04); }
+  50%  { transform: translateY(-5px)  rotate(-4deg) scale(0.97); }
+  75%  { transform: translateY(-18px) rotate(8deg)  scale(1.02); }
+  100% { transform: translateY(0px)   rotate(0deg)  scale(1); }
 }
 
 .hero > .container {
